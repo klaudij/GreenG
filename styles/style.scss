@@ -1,5 +1,6 @@
 $c-black: #101010;
 $c-white: #fff;
+$c-purple: #C6B8E7;
 $c-grey: #454545;
 $c-grey-dark: #303030;
 
@@ -12,6 +13,18 @@ body{
     width: 800px;
     height: 600px;
     overflow: hidden;
+}
+
+main {
+    background-color: $c-purple;
+    height: 100%;
+    width: 300px;
+    margin: 0 0 0 0;
+}
+
+h1 {
+    font-family: "lemon tea";
+    font-size: 35px;
 }
 
 button {

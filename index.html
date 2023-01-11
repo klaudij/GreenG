@@ -6,40 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green G</title>
   </head>
+
+  <link href="https://fonts.cdnfonts.com/css/lemon-tea-2" rel="stylesheet">
+
   <body>
-
-    <h1>Je mama</h1>
     
-    <button id="button">Email information</button>
-    <div id="amountOfEmails"></div>
-    <div id="sizeOfInbox"></div>
-    <div id="uitstoot"></div>
-    
-    <button id="driveButton">Drive information</button>
-    <div id="driveSize"></div>
-    <div id="driveUitstoot"></div>
+    <main>
+        <h1>Clean your inbox, save the planet. </h1>
+    </main>
 
-    <p>Gmail API Quickstart</p>
+    <section>
+      <div id="background"></div>
+      <div id="gmailbar"></div>
+    </section>
 
-    <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+    <footer>
 
-
-    <button onclick="authenticate().then(loadClient)">authorize and load</button>
-    <button onclick="execute()">execute</button>
-
-    <pre id="content" style="white-space: pre-wrap;"></pre>
-
-    <!-- Login first with gmail-->
-    <script src="scripts/logIn.js"></script>
-    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
-
-    <!-- Get Profile / total messages-->
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="scripts/getProfile.js"></script>
-
+    </footer>
 
     <script type="module" src="scripts/main.js"></script>
     <script src="scripts/drivefunctions.js"></script>
