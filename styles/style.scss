@@ -1,0 +1,22 @@
+$c-black: #101010;
+$c-white: #fff;
+$c-grey: #454545;
+$c-grey-dark: #303030;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background-color: greenyellow;
+    display: inline-block;
+  }
