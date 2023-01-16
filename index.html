@@ -11,13 +11,47 @@
       @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 
     </style>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
     <title>Save the planet.</title>
   </head>
 
   <body>
 
+    <div class="storyTutorial">
+      <div class="swiper mySwiper">
+        <img id="storyStickyUp" src="../images/tape.png" />
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h2>Clean your inbox, save the planet. </h2>
+            <div>
+              <p>When you sent that cat video to your colleague it was really funny, but did you realise that this 
+                large attachment also released around <span>50g of CO2</span>  in the atmosphere?  
+                That is the same amount as if you had used <span>five plastic carrier
+                  bags...</span> </p>
+              <img src="images/cat.png" alt="">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            Slide 2
+          </div>
+
+          <div class="swiper-slide">
+            Slide 3 
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <img id="storyStickyDown" src="../images/tape.png" />
+      </div>
+            
+      <div class="tutorial">
+
+      </div>
+    </div>
+
     <img id="factory" src="../images/factory.png" />
+
 
     <main> 
 
@@ -60,7 +94,7 @@
       <img id="profile" src="../images/profileph.png" />
       <img id="gmail" src="../images/gmail.png" />
       <img id="drive" src="../images/drive.png" />
-      <img id="tutorial" src="../images/earthSad.png" />
+      <img id="tutorial" src="../images/earth_thinking.png" />
      </div>
 
     </main>
@@ -75,6 +109,14 @@
       (c) Demi, Klaudija, Arsenio.
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
     <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>

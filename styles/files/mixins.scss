@@ -1,0 +1,32 @@
+@mixin basicLayoutSticky {
+    background-color: $color-purple;
+    border: .2em solid $color-blue;
+    border-radius: 10px;
+    box-shadow: 7px 5px 0 $color-blue;
+}
+
+
+@mixin tapePosition {
+    position: absolute;
+    width: 45%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(315deg);
+}
+
+
+@mixin storyTapeUp {
+    position: absolute;
+    width: 28%;
+    top: -2%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(315deg);
+}
+
+@mixin storyTapeDown {
+    position: absolute;
+    width: 28%;
+    bottom: -47%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(315deg);
+}
