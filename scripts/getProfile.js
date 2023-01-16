@@ -16,6 +16,7 @@
         .then(function() { console.log("GAPI client loaded for API"); },
               function(err) { console.error("Error loading GAPI client for API", err); });
   }
+  var load = loadClient();
 
   var amountOfEmails = '';
   var sizeOfInbox = '';
@@ -30,6 +31,7 @@
       console.log(data);
 
       document.getElementById('uitstoot').innerHTML = `${parseFloat((data / 1048576) * 2.26 / 1000).toFixed(2)} kilograms of CO2 per year`;
+      // emails = await listAllEmails(token, 'category:promotions')
     }),
               function(err) { console.error("Execute error", err); };
   }

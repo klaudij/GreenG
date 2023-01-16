@@ -11,7 +11,14 @@ async function listAllEmails(token, query) {
 
     var previousResponse = await doFetch("https://gmail.googleapis.com/gmail/v1/users/me/messages", "", [], params);
     return previousResponse
+
+    
 }
+console.log(listAllEmails('category:promotions'));
+// listAllEmails();
+// console.log(listAllEmails(token, 'category:promotions'))
+
+
 
 async function getSizeOfEmails(token, messages){
     sizes = [];
@@ -50,7 +57,7 @@ async function getSizeOfEmails(token, messages){
     return totalSizeEstimate * 4
 }
 
-getSizeOfEmails()
+// getSizeOfEmails()
 
 function batchGet(body, token){
     const params = {

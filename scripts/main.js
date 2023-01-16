@@ -1,11 +1,19 @@
 // Our bundler automatically creates styling when imported in the main JS file!
+import CONFIG from '../scripts/config.js';
+import request from '../scripts/request.js';
+
+/* IMPORTS */ 
 import '../styles/style.scss'
+import '../styles/popup.scss'
+import '../styles/starrynight.scss'
 
-
+/* IMPORT */ 
+import '../scripts/popUp.js'
 
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
-// import data from './data.js';
+
+
 
 console.log('Hello, world!');
 
@@ -15,8 +23,8 @@ console.log('Hello, world!');
 
 //////////////////////////////////////////////////
 
-// var amountOfEmails = '';
-// var sizeOfInbox = '';
+var amountOfEmails = '';
+var sizeOfInbox = '';
 
 // window.onload = function() {
 //   document.getElementById('button').addEventListener('click', function() {

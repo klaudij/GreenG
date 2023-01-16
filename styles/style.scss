@@ -1,35 +1,151 @@
-$c-black: #101010;
-$c-white: #fff;
-$c-purple: #C6B8E7;
-$c-grey: #454545;
-$c-grey-dark: #303030;
+@import 'files/colors.scss';
+@import 'files/keyframes.scss';
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
-body{
-    width: 800px;
-    height: 600px;
-    overflow: hidden;
+::-moz-selection { /* Code for Firefox */
+  color: rgb(0, 0, 0);
+  background: $color-blue;
 }
 
-main {
-    background-color: $c-purple;
-    height: 100%;
-    width: 300px;
-    margin: 0 0 0 0;
+::selection {
+  color: rgb(0, 0, 0);
+  background: $color-blue;
 }
 
-h1 {
-    font-family: "lemon tea";
-    font-size: 35px;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-button {
-    margin: 10px;
-    padding: 10px;
-    background-color: greenyellow;
-    display: inline-block;
+::-webkit-scrollbar-track {
+  background-color: rgba(206, 89, 89, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+  border-width: 2px 3px 2px 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background-color: $color-bg;
+  font-family: 'Stylish', sans-serif;
+  overflow: hidden;
+  
+  b {
+    color: $color-blue;
   }
+}
+
+#factory {
+  position: absolute;
+  width: 35%;
+  right: 10em;
+  bottom: -10em;
+}
+
+#sticky {
+  position: relative;
+  background-color: $color-purple;
+  width: 270px;
+  height: 340px;
+  border: .2em solid $color-blue;
+  border-radius: 10px;
+  margin: 2em 1em 2em 1em;
+  padding: 1em;
+  box-shadow: 7px 5px 0 $color-blue;
+  z-index: 1;
+   
+  h1 {
+    font-family: 'Lemon Tea', sans-serif;
+    color: $color-blue;
+    font-size: 25px;    
+    text-align: center;
+    padding: 1em 1em .5em 1em;
+  }
+
+  #tapeSticky {
+    position: absolute;
+    width: 45%;
+    transform: rotate(315deg);
+    margin-top: -80px;
+    margin-left: 65px;
+  }
+
+  .infobox {
+    position: relative;
+    background-color: $color-yellow;
+    padding: 1em;
+    margin: 1em .5em;
+    border: .2em solid $color-blue;
+    border-radius: 10px;
+
+  }
+}
+
+#totalSize {
+  position: relative;
+  background-color: $color-purple;
+  width: 270px;
+  height: 60px;
+  border: .2em solid $color-blue;
+  border-radius: 10px;
+  margin: 2em 1em 2em 1em;
+  padding: 2em 1em 1em 1em;
+  top: 20em;
+  box-shadow: 7px 5px 0 $color-blue;
+  z-index: 1;
+
+  #tapeTotal {
+    position: absolute;
+    width: 45%;
+    transform: rotate(315deg);
+    margin-top: -100px;
+    margin-left: 65px;
+  }
+
+  #sadTotal {
+    position: absolute;
+    display: inline-block;
+    width: 60%;
+    left: 260px;
+    bottom: -25px;
+  }
+}
+
+#chromebar {
+  position: absolute;
+  background-color: $color-purple;
+  width: 50px; 
+  height: 100%;
+  padding: 1em;
+  right: 0;
+  top: 0;
+
+  img {
+    width: 80%;
+    padding: 0 0 1em 0;
+  }
+
+}
+
+
+
+footer {
+  position: fixed;
+  font-family: 'Lemon Tea', sans-serif;
+  font-size: 10px;
+  bottom: 0;
+  right: 0;
+  color: $color-body;
+  padding: 1em;
+  z-index: 3;
+}
