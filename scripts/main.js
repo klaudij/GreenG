@@ -1,14 +1,11 @@
 // Our bundler automatically creates styling when imported in the main JS file!
-import CONFIG from '../scripts/config.js';
-import request from '../scripts/request.js';
-
-/* IMPORTS */ 
 import '../styles/style.scss'
-import '../styles/popup.scss'
-import '../styles/starrynight.scss'
+// import '../styles/popup.scss'
+// import '../styles/starrynight.scss'
 
 /* IMPORT */ 
-import '../scripts/popUp.js'
+// import CONFIG from './config.js'
+// import request from '.request.js';
 
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
@@ -18,6 +15,27 @@ import * as d3 from 'd3';
 console.log('Hello, world!');
 
 
+function closeStory() {
+    const storyTelling = document.querySelector(".storyTutorial");
+    const tutorial = document.querySelector(".tutorialll");
+
+    storyTelling.classList.toggle("closeS");
+    tutorial.classList.add("show")
+    console.log("clickk")
+
+}
+// closeStory()
+document.querySelector('#closeStory').addEventListener('click', closeStory);
+
+
+function toggleModal() {
+    const tutorial = document.querySelector(".tutorialll");
+    tutorial.classList.toggle("show");
+    console.log("clickk")
+}
+
+    document.querySelector('#tutorialReplay').addEventListener('click', toggleModal);
+    document.querySelector('.closeTutorial').addEventListener('click', toggleModal);
 
 
 

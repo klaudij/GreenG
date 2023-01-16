@@ -4,4 +4,6 @@ const CONFIG = {
 
 export default CONFIG;
 
-console.log("config.js workss")
+// console.log("config.js workss")
+
+

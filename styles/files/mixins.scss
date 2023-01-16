@@ -17,16 +17,17 @@
 
 @mixin storyTapeUp {
     position: absolute;
-    width: 28%;
-    top: -2%;
+    width: 12%;
+    top: 22%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(315deg);
+    
 }
 
 @mixin storyTapeDown {
     position: absolute;
-    width: 28%;
-    bottom: -47%;
+    width: 12%;
+    bottom: 2%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(315deg);
 }
