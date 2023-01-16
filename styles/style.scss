@@ -91,6 +91,11 @@ body {
     width: 900px;
     height: 530px;
     overflow: hidden;
+    cursor: grab;
+
+    &:active {
+      cursor:  grabbing;
+    }
 
     .swiper-slide {
       text-align: center;
