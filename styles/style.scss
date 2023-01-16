@@ -79,7 +79,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  // display: none
+  // display: none;
 
   .swiper {
     @include basicLayoutSticky;
@@ -90,7 +90,6 @@ body {
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      
 
       /* Center slide text vertically */
       display: -webkit-box;
@@ -106,6 +105,7 @@ body {
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
+      
 
       h2 {
         font-size: 35px;
@@ -116,26 +116,95 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        // background-color: white;
         margin: 30px 55px 0 55px;
       }
 
-      div p{
-        font-size: 26px;
-        text-align: left;
-        width: 473px;
-        // padding: 0 80px 0 0;
+      &:nth-of-type(1){
+
+        h2 {
+          margin-top: 25px;
+          margin-bottom: 10px;
+        }
+
+        div {
+        margin: 10px 55px 0 55px;
+        }
+
+        div p {
+          font-size: 26px;
+          text-align: left;
+          width: 473px;
+          span {
+            font-size: 25px;
+          }
+        }
+
+        div img {
+          width: 319px;
+          height: auto;
+          margin-right: -30px;
+        }
       }
 
-      div img {
-        width: 319px;
-        height: auto;
-        margin-right: -30px;
+      &:nth-of-type(2){
+        // background-color: white;
+        h2 {
+          margin-bottom: 10px;
+        }
+        >p {
+          width: 721px;
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+
+
+        div {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          > div {
+            background-color: $color-yellow;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 225px;
+            height: 250px;
+            margin: 0 12px;
+
+            img {
+              width: 100px;
+              height: auto;
+              margin-top: -60px;
+              margin-bottom: 10px;
+            }
+
+            p {
+              width: 185px;
+              font-size: 18px;
+            }
+            p:nth-of-type(2) {
+              color: $color-blue;
+              font-family: 'Poppins', sans-serif;
+              background-color: #FFF9E2;
+              font-size: 23px;
+              margin: 10px 0;
+            }
+
+            p:nth-of-type(3){
+              height: 92px;
+            }
+          }
+        }
       }
     }
 
     .swiper-pagination {
-      bottom: 40px;
+      bottom: 25px;
 
       .swiper-pagination-bullet {
         background-color: #fff9e2e2;
