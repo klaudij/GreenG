@@ -18,7 +18,7 @@
 
   <body>
 
-    <div class="storyTutorial">
+    <div class="storyTelling">
       <img id="storyStickyUp" src="images/tape.png" />
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -70,8 +70,10 @@
             </p>
             <p>Would you like to start saving the planet by cleaning your inbox?</p>
 
-            <a id="closeStory">Clean your inbox!</a>
-            <img src="images/earth.png" alt="">
+            <div id="closeStory">
+              <a >Clean your inbox!</a>
+              <lottie-player id="closeStoryAnimation" src="animations/earth_vacuum_animation.json"  background="transparent"  speed="1"  style="width: 240px; height: 240px;" hover loop></lottie-player>
+            </div>
               
           </div>
         </div>
@@ -82,21 +84,37 @@
 
 
 
-    <div class="tutorialll">
-      <div class="mw-modal">
-        <div class="tutorialOn">
-          <div class="tutorialStart">
-            <div class="speech-bubble">
+    <div class="beginTutorial">
+            <div class="stapOne">
               <p>Welcome to Green G. We would like to help you clean your inbox. Would you like to follow the tutorial?</p>
               <a>No, thank you</a> 
               <button>Yes, follow tutorial</button>
               <img class="tutorial1" src="images/earth.png" />
             </div>
-          </div>
-        </div>
-      </div>
 
-      <a class="closeTutorial">Stop tutorial</a> 
+            <div class="stapTow">
+
+            </div>
+
+            <div class="stapThree">
+
+            </div>
+
+            <div class="stapFour">
+
+            </div>
+
+            <div class="stapFive">
+
+            </div>
+
+            <div class="stapSix">
+
+            </div>
+
+
+
+            <a class="closeTutorial">Stop tutorial</a> 
     </div>
 
 
@@ -159,7 +177,13 @@
     <footer>
       (c) Demi, Klaudija, Arsenio.
     </footer>
+    <!-- main JS file -->
     <script type="module" src="scripts/main.js"></script>
+
+    <!-- For LottieFiles -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- For the story-telling swipe -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {

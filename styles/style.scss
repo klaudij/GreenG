@@ -50,8 +50,8 @@ h2 {
 }
 
 p {
-  color : $color-body;
-  
+  color: $color-body;
+
   span {
     color: $color-blue;
     font-family: 'Poppins', sans-serif;
@@ -60,7 +60,7 @@ p {
 
 a {
   text-decoration: none;
-  color:$color-body;
+  color: $color-body;
 }
 
 body {
@@ -73,7 +73,7 @@ body {
   }
 }
 
-.storyTutorial {
+.storyTelling {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.565);
   top: 0;
@@ -94,7 +94,7 @@ body {
     cursor: grab;
 
     &:active {
-      cursor:  grabbing;
+      cursor: grabbing;
     }
 
     .swiper-slide {
@@ -115,7 +115,7 @@ body {
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
-      
+
 
       h2 {
         font-size: 35px;
@@ -129,7 +129,7 @@ body {
         margin: 30px 55px 0 55px;
       }
 
-      &:nth-of-type(1){
+      &:nth-of-type(1) {
 
         h2 {
           margin-top: 25px;
@@ -137,13 +137,14 @@ body {
         }
 
         div {
-        margin: 10px 55px 0 55px;
+          margin: 10px 55px 0 55px;
         }
 
         div p {
           font-size: 26px;
           text-align: left;
           width: 473px;
+
           span {
             font-size: 25px;
           }
@@ -156,11 +157,13 @@ body {
         }
       }
 
-      &:nth-of-type(2){
+      &:nth-of-type(2) {
+
         // background-color: white;
         h2 {
           margin-bottom: 10px;
         }
+
         >p {
           width: 721px;
           font-size: 20px;
@@ -174,7 +177,7 @@ body {
           justify-content: center;
           align-items: center;
 
-          > div {
+          >div {
             background-color: $color-yellow;
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
             display: flex;
@@ -197,6 +200,7 @@ body {
               width: 185px;
               font-size: 18px;
             }
+
             p:nth-of-type(2) {
               color: $color-blue;
               font-family: 'Poppins', sans-serif;
@@ -205,7 +209,7 @@ body {
               margin: 10px 0;
             }
 
-            p:nth-of-type(3){
+            p:nth-of-type(3) {
               height: 92px;
             }
           }
@@ -219,39 +223,43 @@ body {
           margin-top: -40px;
         }
 
-         p {
+        p {
           font-size: 24px;
           width: 820px;
-         }
+        }
 
         p:nth-of-type(1) {
-          margin:30px 0;
+          margin: 30px 0;
         }
-        a {
-          position: relative;
-          margin-top: 80px;
-          background-color: #FFF9E2;
-          border: 2px solid #FFE993;
-          border-radius: 10px;
-          text-align: center;
-          padding: 15px 40px;
-          font-size: 20px;
-          transition: .5s;
 
-          &:hover {
+        div {
+          width: auto;
+          a {
+            position: relative;
+            margin-top: 80px;
+            background-color: #FFF9E2;
+            border: 2px solid #FFE993;
+            border-radius: 10px;
+            text-align: center;
+            padding: 15px 40px;
+            font-size: 20px;
+            transition: .5s;
+          }
+  
+          #closeStoryAnimation {
+  
+            position: absolute;
+            right: 18%;
+            bottom: 10%;
+            cursor: pointer;
+          }
+
+          &:hover a {
             transition: .5s;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             transform: scale(1.1);
             cursor: pointer;
           }
-        }
-        img {
-
-          position: absolute;
-          width: 200px;
-          height: auto;
-          right: 21%;
-          bottom: 10%;
         }
       }
     }
@@ -273,6 +281,7 @@ body {
       }
     }
   }
+
   #storyStickyUp {
     @include storyTapeUp;
     z-index: 999999;
@@ -289,18 +298,19 @@ body {
   display: none;
 }
 
-.tutorialll{
+.beginTutorial {
   display: none;
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
-   background-color: rgba(0, 0, 0, 0.565);
-   transition: transform 500ms cubic-bezier(0,0.2,1,1.1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.565);
+  transition: transform 500ms cubic-bezier(0, 0.2, 1, 1.1);
   z-index: 999999;
   color: white;
   transition: .3s;
+  display: none;
 
   a {
     cursor: pointer;
@@ -317,28 +327,33 @@ body {
       transition: .3s;
     }
   }
-}
-    .show{
-      display: block;
-      transition: .3s;
-    }
-    
-    .mw-modal{
-      z-index: 2;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-       transform: translate(-50%,-50%);
-       max-width: 500px;
-        width: 90%;
-        min-width: 300px;
-         background: white;
-          border: 2px solid #999;
-           padding: 1em 2em;
-            font-size: 1.1rem
 
-    
-    }
+  &div {
+    @include basicLayoutSticky;
+  }
+
+  // .stapOne {
+  //   // @include basicLayoutSticky;
+  //   // z-index: 2;
+  //   // position: absolute;
+  //   // top: 50%;
+  //   // left: 50%;
+  //   // transform: translate(-50%, -50%);
+  //   // // max-width: 500px;
+  //   // // width: 90%;
+  //   // // min-width: 300px;
+  //   // // background: white;
+  //   // // border: 2px solid #999;
+  //   // // padding: 1em 2em;
+  //   // font-size: 1.1rem
+  // }
+}
+
+.show {
+  display: block;
+  transition: .3s;
+}
+
 
 #factory {
   position: absolute;
@@ -424,6 +439,7 @@ body {
       width: 90%;
     }
   }
+
   img {
     width: 80%;
     padding: 0 0 1.2em 0;
@@ -443,4 +459,3 @@ footer {
   padding: 1em;
   z-index: 3;
 }
-

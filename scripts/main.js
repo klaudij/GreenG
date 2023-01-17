@@ -15,21 +15,22 @@ import * as d3 from 'd3';
 console.log('Hello, world!');
 
 
+// CLOSING STORY-TELLING AND START TUTORIAL
 function closeStory() {
-    const storyTelling = document.querySelector(".storyTutorial");
-    const tutorial = document.querySelector(".tutorialll");
+    const storyTelling = document.querySelector(".storyTelling");
+    const tutorial = document.querySelector(".beginTutorial");
 
     storyTelling.classList.toggle("closeS");
     tutorial.classList.add("show")
     console.log("clickk")
 
 }
-// closeStory()
 document.querySelector('#closeStory').addEventListener('click', closeStory);
 
 
+// CLOSING TUTORIAL AND RESTARTING TUTORIAL
 function toggleModal() {
-    const tutorial = document.querySelector(".tutorialll");
+    const tutorial = document.querySelector(".beginTutorial");
     tutorial.classList.toggle("show");
     console.log("clickk")
 }
@@ -39,7 +40,7 @@ function toggleModal() {
 
 
 
-//////////////////////////////////////////////////
+//////////////////////////////////////////////////storyTutorial
 
 var amountOfEmails = '';
 var sizeOfInbox = '';
