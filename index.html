@@ -89,7 +89,7 @@
     <div class="beginTutorial">
             <div class="stapOne">
               <p>Welcome to Green G. We would like to help you clean your inbox. Would you like to follow the tutorial?</p>
-              <a>No, thank you</a> 
+              <!-- <a>No, thank you</a>  -->
               <button>Yes, follow tutorial</button>
               <img class="tutorial1" src="images/earth.png" />
             </div>
@@ -165,13 +165,13 @@
       <img id="gmail" src="images/gmail.png" />
       <img id="drive" src="images/drive.png" />
       <!-- <button id="tutorialReplay"><img src="images/earth_thinking.png" ></button> -->
-      <lottie-player id="tutorialReplay" src="https://assets3.lottiefiles.com/packages/lf20_CzdM5kDsY2.json"  background="transparent"  speed="1"  hover loop  ></lottie-player>
+      <lottie-player class="tutorialReplay" src="https://assets3.lottiefiles.com/packages/lf20_CzdM5kDsY2.json"  background="transparent"  speed="1"  hover loop  ></lottie-player>
      </div>
 
     </main>
 
     <div class="deleteMailsPopUp">
-      <div class="followUp">
+      <div class="followUp openWindow">
         <img class="tape" src="images/tape.png" alt="">
 
         <img src="images/earth.png" alt="">
@@ -182,8 +182,8 @@
           <p>Don’t worry you can find the mails back in your bin inbox in gmail</p>
   
           <div class="buttons">
-            <a >No</a>
-            <a >Yes, clean my inbox</a>
+            <a id="returnToMails">No</a>
+            <a id="continue">Yes, clean my inbox</a>
           </div>
         </div>
 
@@ -191,14 +191,18 @@
 
       <div class="loading">
         <img class="tape" src="images/tape.png" alt="">
+
+        <p>Just a few more minutes..</p>
+        <img src="images/earth.png" alt="">
       </div>
 
       <div class="finished">
+        <img class="tape" src="images/tape.png" alt="">
         <p>Sorry for the wait, You just cleaned up <span>120kg of CO2!</span>
-          I’m proud of you!</p>
+          Keep on going!</p>
 
           <img src="images/earthwave.png" alt="">
-          <a id="proceedLoading">Continue</a>
+          <a id="closeDeletePopUp">Continue</a>
       </div>
 
     </div>

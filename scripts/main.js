@@ -35,17 +35,68 @@ function toggleModal() {
     console.log("clickk")
 }
 
-    document.querySelector('#tutorialReplay').addEventListener('click', toggleModal);
+    document.querySelector('.tutorialReplay').addEventListener('click', toggleModal);
     document.querySelector('.closeTutorial').addEventListener('click', toggleModal);
 
 
 
-// DELETING EMAILS FOLLOW UP QUESTION
-function proceedToLoading() {
 
+// DELETING EMAILS FOLLOW UP QUESTION
+//Closing pop-up screen to NOT delete mails
+function returnToMails() {
+    const toLoad = document.querySelector(".followUp");
+    const xxx = document.querySelector(".deleteMailsPopUp")
+
+    if (toLoad.classList.contains("openWindow")) {
+        xxx.classList.add("closeWindow"); 
+    }
+
+
+    console.log("continue to loading")
+}
+
+//Proceeding to go to loading screen
+function proceedToLoading() {
+    const toLoad = document.querySelector(".followUp");
+    const loading = document.querySelector(".loading");
+
+    if (toLoad.classList.contains("openWindow")) {
+        toLoad.classList.remove("openWindow"); 
+        loading.classList.add("openWindow"); 
+    }
+
+
+    console.log("continue to loading")
+}
+
+//loading screen to finished screen
+function LoadingToFinish() {
+    const loading = document.querySelector(".loading");
+    const finish = document.querySelector(".finished");
+
+    if (loading.classList.contains("openWindow")) {
+        loading.classList.remove("openWindow"); 
+        finish.classList.add("openWindow"); 
+    }
+
+    console.log("continue to loading")
+}
+
+//from finished screen return to home
+function closeDeletMail() {
+    const finish = document.querySelector(".finished");
+    const xxx = document.querySelector(".deleteMailsPopUp")
+
+    if (finish.classList.contains("openWindow")) {
+        xxx.classList.add("closeWindow"); 
+    }
 }
 
 
+document.querySelector('#returnToMails').addEventListener('click', returnToMails);
+document.querySelector('#continue').addEventListener('click', proceedToLoading);
+document.querySelector('.loading').addEventListener('click', LoadingToFinish);
+document.querySelector('#closeDeletePopUp').addEventListener('click', closeDeletMail);
 
 //////////////////////////////////////////////////storyTutorial
 
