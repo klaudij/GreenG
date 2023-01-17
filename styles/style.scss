@@ -234,6 +234,7 @@ body {
 
         div {
           width: auto;
+          margin: 0;
           a {
             position: relative;
             margin-top: 80px;
@@ -437,11 +438,13 @@ body {
 
     img {
       width: 90%;
+      height: auto;
     }
   }
 
   img {
     width: 80%;
+    height: auto;
     padding: 0 0 1.2em 0;
   }
 
