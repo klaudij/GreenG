@@ -40,6 +40,13 @@ function toggleModal() {
 
 
 
+// DELETING EMAILS FOLLOW UP QUESTION
+function proceedToLoading() {
+
+}
+
+
+
 //////////////////////////////////////////////////storyTutorial
 
 var amountOfEmails = '';
