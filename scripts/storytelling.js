@@ -1,26 +1,15 @@
-async function request() {
+async function storyAdnFollowQ() {
 // CLOSING STORY-TELLING AND START TUTORIAL
 function closeStory() {
     const storyTelling = document.querySelector(".storyTelling");
     const tutorial = document.querySelector(".beginTutorial");
 
-    storyTelling.classList.toggle("closeS");
-    tutorial.classList.add("show")
+    storyTelling.classList.toggle("closeWindow");
+    tutorial.classList.add("openWindow")
     console.log("clickk")
 
 }
 document.querySelector('#closeStory').addEventListener('click', closeStory);
-
-
-// CLOSING TUTORIAL AND RESTARTING TUTORIAL
-function toggleModal() {
-    const tutorial = document.querySelector(".beginTutorial");
-    tutorial.classList.toggle("show");
-    console.log("clickk")
-}
-
-    document.querySelector('.tutorialReplay').addEventListener('click', toggleModal);
-    document.querySelector('.closeTutorial').addEventListener('click', toggleModal);
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -37,8 +26,6 @@ function returnToMails() {
     if (followUpQ.classList.contains("openWindow")) {
         deletMailPopUP.classList.add("closeWindow"); 
     }
-
-
     console.log("continue to home")
 }
 
@@ -89,6 +76,6 @@ document.querySelector('.loading').addEventListener('click', LoadingToFinish);
 document.querySelector('#closeDeletePopUp').addEventListener('click', closeDeletMail);
 }
 
-export default request;
+export default storyAdnFollowQ;
 
 console.log("request.js workss")

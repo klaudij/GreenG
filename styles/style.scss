@@ -85,7 +85,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  // display: none;
 
   .swiper {
     @include basicLayoutSticky;
@@ -155,17 +155,11 @@ body {
           height: 390px;
           margin-right: -70px;
         }
-
-        // div img {
-        //   width: 319px;
-        //   height: auto;
-        //   margin-right: -30px;
-        // }
       }
 
       &:nth-of-type(2) {
 
-        // background-color: white;
+
         h2 {
           margin-bottom: 22px;
         }
@@ -242,10 +236,6 @@ body {
           }
         }
 
-        div {
-          width: auto;
-          background-color: pink;
-          margin: 0;
           a {
             position: relative;
             // margin-top: 80px;
@@ -256,23 +246,22 @@ body {
             padding: 15px 40px;
             font-size: 20px;
             transition: .5s;
+
+            &:hover{
+              transition: .5s;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              transform: scale(1.1);
+              cursor: pointer;
+            }
           }
   
           #closeStoryAnimation {
-  
             position: absolute;
-            right: 18%;
-            bottom: 10%;
-            cursor: pointer;
+            left: 0;
+            bottom: -37%;
+            width: 600px;
+            height: 600px;
           }
-
-          &:hover a {
-            transition: .5s;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            transform: scale(1.1);
-            cursor: pointer;
-          }
-        }
       }
     }
 
@@ -306,9 +295,13 @@ body {
 
 }
 
-.closeS {
-  display: none;
-}
+
+
+
+
+
+
+
 
 .beginTutorial {
   display: none;
@@ -323,6 +316,10 @@ body {
   color: white;
   transition: .3s;
   display: none;
+
+  p {
+    padding: .5em 1em;
+  } 
 
   a {
     cursor: pointer;
@@ -340,31 +337,164 @@ body {
     }
   }
 
-  &div {
+  >div {
     @include basicLayoutSticky;
+    width: 337px;
+    height: 150px;
+    transition: .3s;
   }
 
-  // .stapOne {
-  //   // @include basicLayoutSticky;
-  //   // z-index: 2;
-  //   // position: absolute;
-  //   // top: 50%;
-  //   // left: 50%;
-  //   // transform: translate(-50%, -50%);
-  //   // // max-width: 500px;
-  //   // // width: 90%;
-  //   // // min-width: 300px;
-  //   // // background: white;
-  //   // // border: 2px solid #999;
-  //   // // padding: 1em 2em;
-  //   // font-size: 1.1rem
-  // }
+  button {
+    background-color: $color-paleyellow;
+    border: .2em solid $color-yellow;  
+    font-family: 'Stylish', sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: .4em 1em .4em 1em ;
+    margin: 1em;
+    cursor: pointer;
+  
+    &:hover {
+      transform: scale(1.1);
+      transition: .3s;
+    }
+  }
+
+ .stapOne {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  min-width: 300px;
+  padding: 1em 2em;
+  font-size: 1.1rem;
+  z-index: 99999;
+  display: none;
+
+      .tutorial1 {
+       @include tutorialIcon;
+      }
+
+      a { 
+        color: $color-blue;
+        padding: 1.3em 2em;
+      }
+  }
+
+  .stapTwo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    min-width: 300px;
+    padding: 1em 2em;
+    font-size: 1.1rem;
+    z-index: 99999;
+    display: none;
+  
+        .tutorial2 {
+         @include tutorialIcon;
+        }
+    }
+
+    .stapThree {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 500px;
+      min-width: 300px;
+      padding: 1em 2em;
+      font-size: 1.1rem;
+      z-index: 99999;
+      display: none;
+    
+          .tutorial3 {
+           @include tutorialIcon;
+          }
+      }
+
+      .stapFour {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+        min-width: 300px;
+        padding: 1em 2em;
+        font-size: 1.1rem;
+        z-index: 99999;
+        display: none;
+      
+            .tutorial4 {
+             @include tutorialIcon;
+            }
+        }
+  
+        .stapFive {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 500px;
+          min-width: 300px;
+          padding: 1em 2em;
+          font-size: 1.1rem;
+          z-index: 99999;
+          display: none;
+        
+              .tutorial5 {
+               @include tutorialIcon;
+              }
+          }
+
+            
+        .stapSix {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 500px;
+          min-width: 300px;
+          padding: 1em 2em;
+          font-size: 1.1rem;
+          z-index: 99999;
+          display: none;
+        
+              .tutorial6 {
+               @include tutorialIcon;
+              }
+      }
+
+            .stapSeven {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+        min-width: 300px;
+        padding: 1em 2em;
+        font-size: 1.1rem;
+        z-index: 99999;
+        display: none;
+      
+            .tutorial7 {
+             @include tutorialIcon;
+            }
+          }
+
 }
 
-.show {
-  display: block;
-  transition: .3s;
-}
+
+
+
+
+
+
+
+
 
 
 #factory {
@@ -490,7 +620,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  // display: none;
+  display: none;
 
   >div {
     @include basicLayoutSticky;
