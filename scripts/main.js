@@ -5,7 +5,7 @@ import '../styles/style.scss'
 
 /* IMPORT */ 
 // import CONFIG from './config.js'
-// import request from '.request.js';
+import request from './request';
 
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
@@ -13,92 +13,115 @@ import * as d3 from 'd3';
 
 
 console.log('Hello, world!');
+request();
+
+// // CLOSING STORY-TELLING AND START TUTORIAL
+// function closeStory() {
+//     const storyTelling = document.querySelector(".storyTelling");
+//     const tutorial = document.querySelector(".beginTutorial");
+
+//     storyTelling.classList.toggle("closeS");
+//     tutorial.classList.add("show")
+//     console.log("clickk")
+
+// }
+// document.querySelector('#closeStory').addEventListener('click', closeStory);
 
 
-// CLOSING STORY-TELLING AND START TUTORIAL
-function closeStory() {
-    const storyTelling = document.querySelector(".storyTelling");
-    const tutorial = document.querySelector(".beginTutorial");
+// // CLOSING TUTORIAL AND RESTARTING TUTORIAL
+// function toggleModal() {
+//     const tutorial = document.querySelector(".beginTutorial");
+//     tutorial.classList.toggle("show");
+//     console.log("clickk")
+// }
 
-    storyTelling.classList.toggle("closeS");
-    tutorial.classList.add("show")
-    console.log("clickk")
-
-}
-document.querySelector('#closeStory').addEventListener('click', closeStory);
+//     document.querySelector('.tutorialReplay').addEventListener('click', toggleModal);
+//     document.querySelector('.closeTutorial').addEventListener('click', toggleModal);
 
 
-// CLOSING TUTORIAL AND RESTARTING TUTORIAL
-function toggleModal() {
-    const tutorial = document.querySelector(".beginTutorial");
-    tutorial.classList.toggle("show");
-    console.log("clickk")
-}
-
-    document.querySelector('.tutorialReplay').addEventListener('click', toggleModal);
-    document.querySelector('.closeTutorial').addEventListener('click', toggleModal);
+// ///////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////
 
 
+// // DELETING EMAILS FOLLOW UP QUESTION
+// //Closing pop-up screen to NOT delete mails
+// function returnToMails() {
+//     const followUpQ = document.querySelector(".followUp");
+//     const deletMailPopUP = document.querySelector(".deleteMailsPopUp")
+
+//     if (followUpQ.classList.contains("openWindow")) {
+//         deletMailPopUP.classList.add("closeWindow"); 
+//     }
 
 
-// DELETING EMAILS FOLLOW UP QUESTION
-//Closing pop-up screen to NOT delete mails
-function returnToMails() {
-    const toLoad = document.querySelector(".followUp");
-    const xxx = document.querySelector(".deleteMailsPopUp")
+//     console.log("continue to home")
+// }
 
-    if (toLoad.classList.contains("openWindow")) {
-        xxx.classList.add("closeWindow"); 
-    }
+// //Proceeding to go to loading screen
+// function proceedToLoading() {
+//     const followUpQ = document.querySelector(".followUp");
+//     const loading = document.querySelector(".loading");
 
-
-    console.log("continue to loading")
-}
-
-//Proceeding to go to loading screen
-function proceedToLoading() {
-    const toLoad = document.querySelector(".followUp");
-    const loading = document.querySelector(".loading");
-
-    if (toLoad.classList.contains("openWindow")) {
-        toLoad.classList.remove("openWindow"); 
-        loading.classList.add("openWindow"); 
-    }
+//     if (followUpQ.classList.contains("openWindow")) {
+//         followUpQ.classList.remove("openWindow"); 
+//         loading.classList.add("openWindow"); 
+//     }
 
 
-    console.log("continue to loading")
-}
-
-//loading screen to finished screen
-function LoadingToFinish() {
-    const loading = document.querySelector(".loading");
-    const finish = document.querySelector(".finished");
-
-    if (loading.classList.contains("openWindow")) {
-        loading.classList.remove("openWindow"); 
-        finish.classList.add("openWindow"); 
-    }
-
-    console.log("continue to loading")
-}
-
-//from finished screen return to home
-function closeDeletMail() {
-    const finish = document.querySelector(".finished");
-    const xxx = document.querySelector(".deleteMailsPopUp")
-
-    if (finish.classList.contains("openWindow")) {
-        xxx.classList.add("closeWindow"); 
-    }
-}
+//     console.log("continue to loading")
+// }
 
 
-document.querySelector('#returnToMails').addEventListener('click', returnToMails);
-document.querySelector('#continue').addEventListener('click', proceedToLoading);
-document.querySelector('.loading').addEventListener('click', LoadingToFinish);
-document.querySelector('#closeDeletePopUp').addEventListener('click', closeDeletMail);
+// //loading screen to finished screen
+// function LoadingToFinish() {
+//     const loading = document.querySelector(".loading");
+//     const finish = document.querySelector(".finished");
 
-//////////////////////////////////////////////////storyTutorial
+//     if (loading.classList.contains("openWindow")) {
+//         loading.classList.remove("openWindow"); 
+//         finish.classList.add("openWindow"); 
+//     }
+
+//     console.log("continue to finish")
+// }
+
+// //from finished screen return to home
+// function closeDeletMail() {
+//     const finish = document.querySelector(".finished");
+//     const deletMailPopUP = document.querySelector(".deleteMailsPopUp")
+
+//     if (finish.classList.contains("openWindow")) {
+//         deletMailPopUP.classList.add("closeWindow"); 
+//     }
+
+//     console.log("continue to home")
+// }
+
+
+// document.querySelector('#returnToMails').addEventListener('click', returnToMails);
+// document.querySelector('#continue').addEventListener('click', proceedToLoading);
+// document.querySelector('.loading').addEventListener('click', LoadingToFinish);
+// document.querySelector('#closeDeletePopUp').addEventListener('click', closeDeletMail);
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 
 var amountOfEmails = '';
 var sizeOfInbox = '';
