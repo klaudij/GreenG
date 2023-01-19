@@ -14,7 +14,7 @@ async function listAllEmails(token, query) {
 
     
 }
-console.log(listAllEmails('category:promotions'));
+console.log(listAllEmails( 'category:promotions'));
 // listAllEmails();
 // console.log(listAllEmails(token, 'category:promotions'))
 

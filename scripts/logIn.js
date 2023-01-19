@@ -123,5 +123,6 @@
         const output = labels.reduce(
             (str, label) => `${str}${label.name}\n`,
             'Labels:\n');
-        document.getElementById('content').innerText = output;
+        // document.getElementById('content').innerText = output;
+        console.log(output);
       }
