@@ -193,20 +193,17 @@
 
     <div id="totalSize">
       <img id="tapeTotal" src="images/tape.png" />
-      <img id="sadTotal" src="images/earthsad.png" />
+      <img id="car" src="images/car.png" />
 
       <p>
-        Your inbox has <b>180kg</b> of CO2. Reduce your CO2 by 8kg to safe the planet.
+        Your inbox has <b>180kg</b> of CO2. Thats equal to driving 400km in your average car!
       </p>
     </div>
 
     <div id="chromebar">
-      <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-      <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
       <img id="profile" src="images/profileph.png" />
       <img id="gmail" src="images/gmail.png" />
       <img id="drive" src="images/drive.png" />
-      <!-- <button id="tutorialReplay"><img src="images/earth_thinking.png" ></button> -->
       <lottie-player id="tutorial" class="tutorialReplay"
         src="https://assets3.lottiefiles.com/packages/lf20_CzdM5kDsY2.json" background="transparent" speed="1" hover
         loop></lottie-player>
@@ -237,7 +234,7 @@
       <img class="tape" src="images/tape.png" alt="">
 
       <p>Just a few more minutes..</p>
-      <img src="images/earth.png" alt="">
+      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_Aldy23fRRq.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
     </div>
 
     <div class="finished">
@@ -252,36 +249,16 @@
   </div>
 
 
-    <svg id='container' width="960" height="600"></svg>
+    <!-- <svg id='container' width="960" height="600"></svg> -->
     
-
-<!-- <div class="container">
-  <svg id="circle-pack"></svg>
-</div> -->
-<!-- <div id="kk svg"></div> -->
-<!-- <svg width="960" height="600"></svg> -->
-<!-- <svg id="circle-pack"></svg> -->
-<!-- <svg width="960" height="960"></svg> -->
-
-
   <footer>
     (c) Demi, Klaudija, Arsenio.
   </footer>
   <!-- main JS file -->
   <script type="module" src="scripts/main.js"></script>
 
-  <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/565729/underscore-min.js"></script>
-
-  <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.14.2/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script> -->
-
-
-
-  <script src="scripts/logIn.js"></script>
-  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-  <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+  <!-- D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.43/d3.min.js"></script>
 
   <!-- For LottieFiles -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

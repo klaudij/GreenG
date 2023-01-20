@@ -629,14 +629,19 @@ svg {
   bottom: 0;
   z-index: 1;
 
+  p {
+    margin: -5px 15px 0 15px;
+  }
+
   #tapeTotal {
     @include tapePosition;
   }
 
-  #sadTotal {
+  #car {
     position: absolute;
     display: inline-block;
-    width: 60%;
+    width: 40%;
+    height: auto;
     left: 260px;
     bottom: -25px;
   }
@@ -699,7 +704,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  // display: none;
 
   >div {
     @include basicLayoutSticky;
@@ -807,10 +812,11 @@ svg {
       font-size: 24px;
     }
 
-    img {
-
-      width: 200px;
+    lottie-player {
+      width: 480px;
       height: auto;
+      margin-top: -40px;
+      margin-left: 30px;
     }
   }
 
