@@ -4,15 +4,15 @@ import '../styles/style.scss'
 /* IMPORT */ 
 import storyAdnFollowQ from './storytelling.js';
 import tutorialStart from './tutorial.js';
-import data from './data.js';
-
+// import data from './data.js';
+import * as datas from './data.json';
+const dataa = datas;
 // We can use node_modules directely in the browser!
 // import * as d3 from 'd3';
 
 console.log('Hello, world!');
 storyAdnFollowQ();
 tutorialStart();
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -22,8 +22,7 @@ const margin = 0,
 		padding = 3,
 		diameter = 750,
 		width = 750,
-		height= 750,
-		dataa = data();
+		height= 750;
 
 		const color = d3.scale.linear()
 		.domain([0, depthCount(dataa)])
@@ -68,7 +67,7 @@ const margin = 0,
 	    })
         .on("mouseover", (e, i) =>  
           d3.select("#tooltip1")
-          .html("<p>helloo</p>")
+          .html("<p>Death #" + i.size +"</p> ")
           .transition()
           .duration(175)
           .style("opacity", 1)
