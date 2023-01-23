@@ -1,5 +1,5 @@
 const CONFIG = {
-	url: 'https://api.le-systeme-solaire.net/rest/bodies/'
+	url: './data.json'
 }
 
 export default CONFIG;
