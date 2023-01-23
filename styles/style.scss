@@ -593,20 +593,29 @@ svg {
   bottom: 200px;
   z-index: 1;
 
-  button { 
+  button, select { 
     background-color: $color-paleyellow;
     border: .2em solid $color-yellow;  
     font-family: 'Stylish', sans-serif;
     font-size: 16px;
     border-radius: 10px;
+    width: 105px;
     padding: .4em 1em .4em 1em ;
-    margin: 1em;
-
-    &:nth-of-type(2):hover {
-      transform: scale(1.1);
-      transition: .3s;
-    }
+    margin: .7em .7em;
+    cursor: pointer;
   }
+
+  select {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 20px;
+  }
+
+   button:hover {
+    transform: scale(1.1);
+    transition: .3s;
+   }
   p {
     margin: -5px 15px 0 15px;
   }
@@ -914,4 +923,24 @@ footer {
   color: $color-body;
   padding: 1em;
   z-index: 3;
+}
+
+
+
+
+
+
+#tooltip1 {
+  background-color: white;
+  text-align: left;
+  color: black;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 9999999999999999;
+  opacity: 0;
+
+
 }

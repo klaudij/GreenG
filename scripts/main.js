@@ -9,8 +9,6 @@ import data from './data.js';
 // We can use node_modules directely in the browser!
 // import * as d3 from 'd3';
 
-
-
 console.log('Hello, world!');
 storyAdnFollowQ();
 tutorialStart();
@@ -68,10 +66,19 @@ const margin = 0,
 	    .style("display", function(d) {
 			return d.parent === dataa ? null : "none";
 	    })
-		// .call(d3.drag())
-		// .on("start", dragstarted)
-		// .on("drag", dragged)
-		// .on("end", dragended)
+        .on("mouseover", (e, i) =>  
+          d3.select("#tooltip1")
+          .html("<p>helloo</p>")
+          .transition()
+          .duration(175)
+          .style("opacity", 1)
+        )
+        .on("mousemove", (e) => 
+          d3.select("#tooltip1")
+          .style("left", (e.pageX + 20) + "px")
+          .style("top", (e.pageY + 200) + "px")
+        )
+        .on("mouseout", (e) =>  d3.select("#tooltip1").style("opacity", 0))
 	    .on("dblclick", function(d) {
 				if (focus !== d) zoom(d), d3.event.stopPropagation();
 	    });
@@ -155,11 +162,13 @@ function zoomTo(v) {
 		});
 }
 
+
 d3.select("body")
 		.on("dblclick", function() {
 				zoom(dataa);
 		});
 
+		
 zoomTo([dataa.x, dataa.y, dataa.r * 2 + margin]);
 
 /**
@@ -175,7 +184,6 @@ function depthCount(branch) {
 }
 
 d3.select(self.frameElement).style("height", diameter + "px");
-
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////

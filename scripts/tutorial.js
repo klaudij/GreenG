@@ -118,6 +118,7 @@ async function tutorialStart() {
   }
 
   document.querySelector("#tutorial").addEventListener("click", restartTut);
+  
 }
 
 export default tutorialStart;

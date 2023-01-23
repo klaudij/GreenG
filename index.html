@@ -195,8 +195,13 @@
       <h2 class="filterTitle">Filter</h2>
       <img id="tapeFilter" src="images/tape.png" />
  
-
-      <button id="dropdownbutton">from <img id="dropdown" src="images/chevron-down.svg" /></i></button>
+      <select name="cars" id="dropdownbutton">
+        <option value="anyTime">Any Time</option>
+        <option value="week">Older than a week</option>
+        <option value="month">Older than a motnh</option>
+        <option value="sixMonths">Older than a 6 months</option>
+        <option value="year">Older than a year</option>
+      </select>
       <button id="unread">is unread</button>
 
     </div>
@@ -212,7 +217,7 @@
     </div>
 
     <div id="chromebar">
-      <img id="profile" src="images/profileph.png" />
+      <img id="profile" src="images/profile_icon.png" />
       <img id="gmail" src="images/gmail.png" />
       <img id="drive" src="images/drive.png" />
       <lottie-player id="tutorial" class="tutorialReplay"
@@ -261,6 +266,7 @@
 
 
     <svg id='container'></svg>
+    <div id="tooltip1"></div>
     
   <footer>
     (c) Demi, Klaudija, Arsenio.
