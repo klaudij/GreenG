@@ -20,6 +20,7 @@ tutorialStart();
 ///////////////////////////////////////////////////////////////////////
 async function start() {
 	const dataa = await request(CONFIG.url);
+	console.log("data come through")
 
 	const margin = 0,
 			padding = 3,
