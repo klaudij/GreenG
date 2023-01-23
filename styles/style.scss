@@ -931,15 +931,13 @@ footer {
 
 
 #tooltip1 {
-  background-color: white;
+  @include basicLayoutSticky;
+  position: absolute;
   text-align: left;
   color: black;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  z-index: 9999999999999999;
+  // z-index: 9999999999999999 !important;
   opacity: 0;
 
 

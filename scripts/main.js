@@ -75,8 +75,8 @@ const margin = 0,
         )
         .on("mousemove", (e) => 
           d3.select("#tooltip1")
-          .style("left", (e.pageX + 20) + "px")
-          .style("top", (e.pageY + 200) + "px")
+		  .style("left", (d3.event.pageX + 20) + "px")
+		  .style("top", (d3.event.pageY) + "px")
         )
         .on("mouseout", (e) =>  d3.select("#tooltip1").style("opacity", 0))
 	    .on("dblclick", function(d) {
