@@ -22,10 +22,9 @@ tutorialStart();
 ///////////////////////////////////////////////////////////////////////
 const margin = 0,
 		padding = 3,
-		diameter = 900,
-		width = 900,
-		height= 900,
-		numPoints = 10,
+		diameter = 750,
+		width = 750,
+		height= 750,
 		dataa = data();
 
 		const color = d3.scale.linear()
@@ -36,15 +35,15 @@ const margin = 0,
 		.padding(padding)
 		.size([diameter, diameter])
 		.value(function(d) {
-				//return d.size;
-			return 100;
+				return d.size;
+			// return 1;
 		}),
 		arc = d3.svg.arc().innerRadius(0),
 		pie = d3.layout.pie;
 
 		const svg = d3.select("svg")
-		.attr("width", width)
-		.attr("height", height)
+		.attr("width", width + 100)
+		.attr("height", height + 100)
 		.append("g")
 		.attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
@@ -54,7 +53,7 @@ const margin = 0,
 
 		const circle = svg.selectAll("circle")
 		.data(packLayout)
-		.enter().append("circle")
+		.enter().append("circle") 
 		.attr("pointer-events", d => !d.children ? "none" : null)
 		.attr("class", function(d) {
 				return d.children ? "node" : "node node--leaf" ;
@@ -63,12 +62,12 @@ const margin = 0,
 		.style("fill", function(d) {
 				return d.children ? color(d.depth) : null;
 		})
-		// .style("fill-opacity", function(d) {
-		// 	return d.parent === dataa ? 1 : 0;
-	    // })
-	    // .style("display", function(d) {
-		// 	return d.parent === dataa ? null : "none";
-	    // })
+		.style("fill-opacity", function(d) {
+			return d.parent === dataa ? 1 : 0;
+	    })
+	    .style("display", function(d) {
+			return d.parent === dataa ? null : "none";
+	    })
 		// .call(d3.drag())
 		// .on("start", dragstarted)
 		// .on("drag", dragged)
@@ -80,8 +79,8 @@ const margin = 0,
 	
 		
 
-		svg.selectAll("circle")
-		.data(packLayout.slice(-1));
+		// svg.selectAll("circle")
+		// .data(packLayout.slice(-1));
 
 		
 
@@ -130,19 +129,19 @@ function zoom(d) {
 				});
 
 
-				// transition.selectAll("circle")
-				// .filter(function(d) {
-				// 	return d.parent === focus || this.style.display === "block";
-				// })
-				// .style("fill-opacity", function(d) {
-				// 		return d.parent === focus ? 1 : 0;
-				// })
-				// .each("start", function(d) {
-				// 		if (d.parent === focus) this.style.display = "block";
-				// })
-				// .each("end", function(d) {
-				// 		if (d.parent !== focus) this.style.display = "none";
-				// });
+				transition.selectAll("circle")
+				.filter(function(d) {
+					return d.parent === focus || this.style.display === "block";
+				})
+				.style("fill-opacity", function(d) {
+						return d.parent === focus ? 1 : 0;
+				})
+				.each("start", function(d) {
+						if (d.parent === focus) this.style.display = "block";
+				})
+				.each("end", function(d) {
+						if (d.parent !== focus) this.style.display = "none";
+				});
 }
 
 function zoomTo(v) {

@@ -99,7 +99,7 @@ body {
 
 .label {
   font-family: 'Stylish', sans-serif;
-  font-size: 17px;
+  font-size: 24px;
   text-anchor: middle;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
 }
@@ -539,13 +539,6 @@ svg {
 
 
 
-
-
-
-
-
-
-
 #factory {
   position: absolute;
   width: 35%;
@@ -588,6 +581,66 @@ svg {
   }
 }
 
+
+#filter {
+  @include basicLayoutSticky;
+
+  position: absolute;
+  width: 270px;
+  height: 60px;
+  margin: 2em 1em 2em 1em;
+  padding: 2em 1em 1em 1em;
+  bottom: 200px;
+  z-index: 1;
+
+  button { 
+    background-color: $color-paleyellow;
+    border: .2em solid $color-yellow;  
+    font-family: 'Stylish', sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: .4em 1em .4em 1em ;
+    margin: 1em;
+
+    &:nth-of-type(2):hover {
+      transform: scale(1.1);
+      transition: .3s;
+    }
+  }
+  p {
+    margin: -5px 15px 0 15px;
+  }
+
+  .filterTitle {
+    font-family: 'Stylish', sans-serif;
+    color: #000;
+    position: absolute;
+    margin-top: -43px;
+    margin-left: 115px;
+    font-size: 18px;
+    z-index: 99;
+  }
+
+  #dropdownbutton {
+    position: relative;
+    width: 100px;
+  }
+
+  #unread {
+    position: relative;
+  }
+
+  #dropdown {
+    position: relative;
+    width: 15%;
+    padding: 0 .5em 0  .5em;
+  }
+
+  #tapeFilter {
+    @include tapePosition;
+  }
+}
+
 #totalSize {
   @include basicLayoutSticky;
 
@@ -603,6 +656,16 @@ svg {
     margin: -5px 15px 0 15px;
   }
 
+  .title {
+    font-family: 'Stylish', sans-serif;
+    color: #000;
+    position: absolute;
+    margin-top: -43px;
+    margin-left: 115px;
+    font-size: 18px;
+    z-index: 99;
+  }
+  
   #tapeTotal {
     @include tapePosition;
   }
