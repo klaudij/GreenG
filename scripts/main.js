@@ -25,6 +25,7 @@ const margin = 0,
 		diameter = 900,
 		width = 900,
 		height= 900,
+		numPoints = 10,
 		dataa = data();
 
 		const color = d3.scale.linear()
@@ -56,21 +57,28 @@ const margin = 0,
 		.enter().append("circle")
 		.attr("pointer-events", d => !d.children ? "none" : null)
 		.attr("class", function(d) {
-				return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
+				return d.children ? "node" : "node node--leaf" ;
 		})
 		.attr("fill", "none")
 		.style("fill", function(d) {
 				return d.children ? color(d.depth) : null;
 		})
-		.style("fill-opacity", function(d) {
-			return d.parent === dataa ? 1 : 0;
-	})
-	.style("display", function(d) {
-			return d.parent === dataa ? null : "none";
-	})
-		.on("click", function(d) {
+		// .style("fill-opacity", function(d) {
+		// 	return d.parent === dataa ? 1 : 0;
+	    // })
+	    // .style("display", function(d) {
+		// 	return d.parent === dataa ? null : "none";
+	    // })
+		// .call(d3.drag())
+		// .on("start", dragstarted)
+		// .on("drag", dragged)
+		// .on("end", dragended)
+	    .on("dblclick", function(d) {
 				if (focus !== d) zoom(d), d3.event.stopPropagation();
-		});
+	    });
+
+	
+		
 
 		svg.selectAll("circle")
 		.data(packLayout.slice(-1));
@@ -90,21 +98,12 @@ const margin = 0,
 		.text(function(d) {
 				return d.name;
 		});
-		
-
+	
 
 		const circleAndText = svg.selectAll("circle, text");
 
 
-d3.select("body")
-		.on("dblclick", function() {
-				zoom(dataa);
-		});
-
-zoomTo([dataa.x, dataa.y, dataa.r * 2 + margin]);
-
 function zoom(d) {
-	const focus0 = focus;
 		focus = d;
 
 		const transition = d3.transition()
@@ -131,19 +130,19 @@ function zoom(d) {
 				});
 
 
-				transition.selectAll("circle")
-				.filter(function(d) {
-						return d.parent === focus || this.style.display === "block";
-				})
-				.style("fill-opacity", function(d) {
-						return d.parent === focus ? 1 : 0;
-				})
-				.each("start", function(d) {
-						if (d.parent === focus) this.style.display = "block";
-				})
-				.each("end", function(d) {
-						if (d.parent !== focus) this.style.display = "none";
-				});
+				// transition.selectAll("circle")
+				// .filter(function(d) {
+				// 	return d.parent === focus || this.style.display === "block";
+				// })
+				// .style("fill-opacity", function(d) {
+				// 		return d.parent === focus ? 1 : 0;
+				// })
+				// .each("start", function(d) {
+				// 		if (d.parent === focus) this.style.display = "block";
+				// })
+				// .each("end", function(d) {
+				// 		if (d.parent !== focus) this.style.display = "none";
+				// });
 }
 
 function zoomTo(v) {
@@ -156,6 +155,13 @@ function zoomTo(v) {
 				return d.r * k;
 		});
 }
+
+d3.select("body")
+		.on("dblclick", function() {
+				zoom(dataa);
+		});
+
+zoomTo([dataa.x, dataa.y, dataa.r * 2 + margin]);
 
 /**
  * Counts JSON graph depth

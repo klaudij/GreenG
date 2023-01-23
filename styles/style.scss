@@ -76,16 +76,25 @@ body {
 
 
 .node {
+  fill: white;
+  stroke: #C6B8E7;
+  stroke-width: 1px;
   cursor: pointer;
 }
 
 .node:hover {
   stroke: #C6B8E7;
-  stroke-width: 3px;
+  stroke-width: 6px;
 }
 
 .node--leaf {
   fill: white;
+  stroke: #C6B8E7;
+  stroke-width: 1px;
+}
+
+.node--leaf:hover {
+  stroke-width: 5px;
 }
 
 .label {
@@ -98,7 +107,7 @@ body {
 .label,
 .node--root,
 .node--leaf {
-  pointer-events: none;
+  pointer-events: pointer;
 }
 
 
