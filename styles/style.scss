@@ -82,7 +82,7 @@ body {
 
 .node:hover {
   stroke: #C6B8E7;
-  stroke-width: 6px;
+  stroke-width: 5px;
 }
 
 .node--leaf {
@@ -95,9 +95,9 @@ body {
   stroke-width: 5px;
 }
 
-.label {
+text {
   font-family: 'Stylish', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   text-anchor: middle;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
   fill-opacity: 0;
@@ -949,7 +949,7 @@ footer {
   color: black;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  // z-index: 9999999999999999 !important;
+ padding: 3px;
   opacity: 0;
 
 

@@ -60,13 +60,8 @@ async function start() {
 			.attr("class", function(d) {
 					return d.children ? "node" : "node node--leaf" ;
 			})
-			.attr("fill", "none")
 			.style("fill", function(d) {
 					return d.children ? color(d.depth) : null;
-			})
-			.style("display", function(d) {
-				if (d.depth === 1)
-				return "block";
 			})
 			.style("fill-opacity", function(d) {
 				return d.parent === dataa ? 1 : 0;
@@ -90,19 +85,15 @@ async function start() {
 			.on("dblclick", function(d) {
 					if (focus !== d) zoom(d), d3.event.stopPropagation();
 			});
-	
-		
-			
-	
+
 			// svg.selectAll("circle")
 			// .data(newData.slice(-1));
-	
-			
 	
 			const text = svg.selectAll("text")
 			.data(newData)
 			.enter().append("text")
 			.attr("class", "label")
+			.style("text-anchor", "middle")
 			.style("opacity", function(d) {
 				if (d.depth === 3)
 				return 0;
@@ -117,7 +108,6 @@ async function start() {
 					return d.name;
 			});
 		
-	
 			const circleAndText = svg.selectAll("circle, text");
 	
 	
