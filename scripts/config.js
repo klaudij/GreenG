@@ -1,5 +1,5 @@
 const CONFIG = {
-	url: '../public/data.json'
+	url: '/data.json'
 }
 
 export default CONFIG;

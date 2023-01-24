@@ -72,7 +72,7 @@ async function start() {
 			})
 			.on("mouseover", (e, i) =>  
 			  d3.select("#tooltip1")
-			  .html("<p>Death #" + i.size +"</p> ")
+			  .html("<p>#" + i.size +"</p> ")
 			  .transition()
 			  .duration(175)
 			  .style("opacity", 1)
