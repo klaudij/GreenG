@@ -109,11 +109,12 @@ body {
   pointer-events: pointer;
 }
 
-svg {
+#bubblechart {
   position: absolute;
   top: 45%;
-  left: 50%;
+  left: 53%;
   transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
 
@@ -131,7 +132,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  // display: none;
+  display: none;
 
   .swiper {
     @include basicLayoutSticky;
@@ -539,8 +540,8 @@ svg {
 
 #factory {
   position: absolute;
-  width: 35%;
-  right: 10em;
+  width: 33%;
+  right: 14em;
   bottom: -10em;
 }
 

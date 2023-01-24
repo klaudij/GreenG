@@ -36,25 +36,25 @@ async function start() {
 			.size([diameter, diameter])
 			.value(function(d) {
 					return d.size;
-				// return 1;
 			}),
 			arc = d3.svg.arc().innerRadius(0),
 			pie = d3.layout.pie;
 	
 			const svg = d3.select("svg")
-			.attr("width", width + 100)
-			.attr("height", height + 100)
+			.attr("width", width )
+			.attr("height", height)
 			.append("g")
 			.attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 	
 			var focus = dataa,
-			packLayout = pack.nodes(dataa),
+			newData = pack.nodes(dataa),
 			view;
 
-			console.log(packLayout.children)
+
+			console.log(newData[1].name)
 
 			const circle = svg.selectAll("circle")
-			.data(packLayout)
+			.data(newData)
 			.enter().append("circle") 
 			.attr("pointer-events", d => !d.children ? "none" : null)
 			.attr("class", function(d) {
@@ -76,7 +76,7 @@ async function start() {
 			})
 			.on("mouseover", (e, i) =>  
 			  d3.select("#tooltip1")
-			  .html("<p>#" + i.name +"</p> ")
+			  .html("<p>" + newData[i].name +"</p> ")
 			  .transition()
 			  .duration(175)
 			  .style("opacity", 1)
@@ -95,12 +95,12 @@ async function start() {
 			
 	
 			// svg.selectAll("circle")
-			// .data(packLayout.slice(-1));
+			// .data(newData.slice(-1));
 	
 			
 	
 			const text = svg.selectAll("text")
-			.data(packLayout)
+			.data(newData)
 			.enter().append("text")
 			.attr("class", "label")
 			.style("opacity", function(d) {
