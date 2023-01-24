@@ -8,7 +8,6 @@ import tutorialStart from './tutorial.js';
 import CONFIG from './config.js';
 import request from './request.js';
 
-
 // We can use node_modules directely in the browser!
 // import * as d3 from 'd3';
 
@@ -21,8 +20,7 @@ tutorialStart();
 ///////////////////////////////////////////////////////////////////////
 async function start() {
 	const dataa = await request(CONFIG.url);
-	console.log("data come through")
-
+	// console.log(dataa.children)
 	const margin = 0,
 			padding = 3,
 			diameter = 750,
@@ -52,7 +50,9 @@ async function start() {
 			var focus = dataa,
 			packLayout = pack.nodes(dataa),
 			view;
-	
+
+			console.log(packLayout.children)
+
 			const circle = svg.selectAll("circle")
 			.data(packLayout)
 			.enter().append("circle") 
@@ -64,6 +64,10 @@ async function start() {
 			.style("fill", function(d) {
 					return d.children ? color(d.depth) : null;
 			})
+			.style("display", function(d) {
+				if (d.depth === 1)
+				return "block";
+			})
 			.style("fill-opacity", function(d) {
 				return d.parent === dataa ? 1 : 0;
 			})
@@ -72,7 +76,7 @@ async function start() {
 			})
 			.on("mouseover", (e, i) =>  
 			  d3.select("#tooltip1")
-			  .html("<p>#" + i.size +"</p> ")
+			  .html("<p>#" + i.name +"</p> ")
 			  .transition()
 			  .duration(175)
 			  .style("opacity", 1)
@@ -99,6 +103,10 @@ async function start() {
 			.data(packLayout)
 			.enter().append("text")
 			.attr("class", "label")
+			.style("opacity", function(d) {
+				if (d.depth === 3)
+				return 0;
+			})
 			.style("fill-opacity", function(d) {
 					return d.parent === dataa ? 1 : 0;
 			})

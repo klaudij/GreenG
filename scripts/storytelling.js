@@ -15,16 +15,23 @@ document.querySelector('#closeStory').addEventListener('click', closeStory);
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
+function openDeleteScreen(){
+    const deletMailPopUP = document.querySelector(".deleteMailsPopUp")
+    deletMailPopUP.classList.add("openWindow")
+
+
+}
+
+document.querySelector("#DeleteMails").addEventListener("click", openDeleteScreen);
 
 
 // DELETING EMAILS FOLLOW UP QUESTION
 //Closing pop-up screen to NOT delete mails
 function returnToMails() {
-    const followUpQ = document.querySelector(".followUp");
     const deletMailPopUP = document.querySelector(".deleteMailsPopUp")
 
-    if (followUpQ.classList.contains("openWindow")) {
-        deletMailPopUP.classList.add("closeWindow"); 
+    if(deletMailPopUP.classList.contains("openWindow")) {
+        deletMailPopUP.classList.remove("openWindow"); 
     }
     console.log("continue to home")
 }
@@ -63,13 +70,13 @@ function closeDeletMail() {
     const deletMailPopUP = document.querySelector(".deleteMailsPopUp")
 
     if (finish.classList.contains("openWindow")) {
-        deletMailPopUP.classList.add("closeWindow"); 
+        deletMailPopUP.classList.remove("openWindow"); 
     }
 
     console.log("continue to home")
 }
 
-
+document.querySelector("#DeleteMails").addEventListener("click", openDeleteScreen);
 document.querySelector('#returnToMails').addEventListener('click', returnToMails);
 document.querySelector('#continue').addEventListener('click', proceedToLoading);
 document.querySelector('.loading').addEventListener('click', LoadingToFinish);

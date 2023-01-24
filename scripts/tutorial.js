@@ -86,15 +86,12 @@ async function tutorialStart() {
 
   // Restart Tut
   function restartTut() {
-    const tutorial = document.querySelector(".beginTutorial");
     const stapOne = document.querySelector(".stapOne");
     const stapTwo = document.querySelector(".stapTwo");
     const stapThree = document.querySelector(".stapThree");
     const stapFour = document.querySelector(".stapFour");
     const stapFive = document.querySelector(".stapFive");
     const stapSix = document.querySelector(".stapSix");
-
-    tutorial.classList.toggle("show");
 
     stapOne.classList.add("openWindow");
 
