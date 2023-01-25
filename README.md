@@ -12,7 +12,7 @@ Minor Information Design final assessment
 ## Introduction 👋🏻
 For this years final assesmtent for the Minor Information Design, my team and i choose to go with the Green G project. 
 <br>“How can one little Email destroy the planet?” Is the question what was asked during their research process. These couple weeks my team and i 
- tried to solve this by visualizing the problem, how we can help the users to be more aware of CO2 footprint that is left by the emails in their inbox and how they can reduce it. 
+ tried to solve this by visualizing the problem, how we can help the users to be more aware of CO2 footprint that is left by the emails in their inbox and how they can reduce it by using our solution.
  
 
 
