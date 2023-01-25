@@ -32,7 +32,7 @@ You need the following installed:
 
 ### Clone repository
 ```
-gh repo clone klaudij/tech-track-22-23
+gh repo clone klaudij/GreenG
 ```
 
 
@@ -46,8 +46,7 @@ npm install
 My application makes use of the following dependencies/libraries:
 - [ SASS ](https://sass-lang.com/install)
 - [ D3 ](https://www.npmjs.com/package/d3)
-- [ GSAP ](https://greensock.com/docs/v3/Installation)
-- [ animate.css ](https://animate.style/)
+- [ Swiper ](https://swiperjs.com/get-started)
 - [ LottieFiles ](https://lottiefiles.com/)
 
 
@@ -64,7 +63,7 @@ example ---> Local:   http://localhost:5174/
 ```
 
 ## Documentation ✍🏻
-[ My process and journey can be found in Wiki ](https://github.com/klaudij/tech-track-22-23/wiki)
+[ Our process and journey can be found in Google Docs ](https://docs.google.com/document/d/1TRh6D6qw1PnmqOlP7Si7SB6WLY9Ag2eHLxb0tTmsQuU/edit?usp=sharing)
 
 
 ## Authors 🙋🏻‍♀️
