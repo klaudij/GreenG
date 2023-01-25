@@ -74,14 +74,19 @@ async function start() {
 			  .style("left", (d3.event.pageX + 20) + "px")
 			  .style("top", (d3.event.pageY) + "px")
 			)
-			.on("mouseout", (e) =>  d3.select("#tooltip1").style("opacity", 0))
+			.on("mouseout", function(d) {
+				d3.select("#tooltip1").style("opacity", 0)
+			  })
+			.on("click", function(d) {
+				d3.select(this).classed("borderr", function() { return !this.classList.contains("borderr"); });
+			})
 			.on("dblclick", function(d) {
 					if (focus !== d) zoom(d), d3.event.stopPropagation();
 			});
 
 			// svg.selectAll("circle")
 			// .data(newData.slice(-1));
-	
+
 			const text = svg.selectAll("text")
 			.data(newData)
 			.enter().append("text")

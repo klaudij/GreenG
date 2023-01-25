@@ -109,6 +109,11 @@ text {
   pointer-events: pointer;
 }
 
+.borderr {
+  stroke: #C6B8E7;
+  stroke-width: 5px;
+}
+
 #bubblechart {
   position: absolute;
   top: 45%;
@@ -128,6 +133,7 @@ text {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 
   .swiper {
     @include basicLayoutSticky;
