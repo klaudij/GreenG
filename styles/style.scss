@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  max-width: 100%;
+  // max-width: 100%;
 }
 
 ::-moz-selection {
@@ -132,7 +132,7 @@ text {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  // display: none;
 
   .swiper {
     @include basicLayoutSticky;
@@ -351,6 +351,7 @@ text {
 
 
 
+
 .beginTutorial {
   display: none;
   width: 100%;
@@ -433,62 +434,95 @@ text {
   .stapTwo {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
-    max-width: 500px;
+    max-width: 450px;
     min-width: 300px;
-    padding: 1em 2em;
+    height: 60px;
+    padding: 1em 1em 1em 2em;
     font-size: 1.1rem;
     z-index: 99999;
     display: none;
   
         .tutorial2 {
          @include tutorialIcon;
+         width: 40%;
+         height: auto;
         }
+
+    }
+
+    .button2 {
+      position: absolute;
+      font-size: 22px;
+      border-radius: 100%;
+      width: 260px;
+      height: 260px;
+      left: 400px;
+      top: -120px;
+
+      &:hover {
+        transform: scale(1);
+        border: 6px solid #C6B8E7;
+      }
     }
 
     .stapThree {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      bottom: 0%;
+      left: 25%;
       transform: translate(-50%, -50%);
       max-width: 500px;
       min-width: 300px;
-      padding: 1em 2em;
+      padding: 1em 1em 1.5em 2em;
       font-size: 1.1rem;
       z-index: 99999;
       display: none;
     
           .tutorial3 {
-           @include tutorialIcon;
+            @include tutorialIcon;
+            width: 40%;
+            z-index: 99999;
           }
+
       }
 
       .stapFour {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        bottom: 0%;
+        left: 25%;
         transform: translate(-50%, -50%);
         max-width: 500px;
         min-width: 300px;
-        padding: 1em 2em;
+        padding: 1em 1em 1.5em 2em;
         font-size: 1.1rem;
         z-index: 99999;
         display: none;
       
             .tutorial4 {
-             @include tutorialIcon;
+              @include tutorialIcon;
+              width: 35%;
+              z-index: 99999;
             }
+        }
+  
+        .tutorialimg {
+          position: absolute;
+          top: -600px;
+          left: 300px;
+          width: 800px;
+          height: auto;
+    
         }
   
         .stapFive {
           position: absolute;
-          top: 50%;
-          left: 50%;
+          bottom: 0%;
+          left: 25%;
           transform: translate(-50%, -50%);
           max-width: 500px;
           min-width: 300px;
-          padding: 1em 2em;
+          padding: 1em 1em 1.5em 2em;
           font-size: 1.1rem;
           z-index: 99999;
           display: none;
@@ -504,35 +538,18 @@ text {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          max-width: 500px;
-          min-width: 300px;
-          padding: 1em 2em;
+          max-width: 600px;      
+          min-width: 400px;
+          padding: 1em 1em 4em 2em;
           font-size: 1.1rem;
           z-index: 99999;
           display: none;
         
               .tutorial6 {
                @include tutorialIcon;
+               width: 35%;
               }
       }
-
-            .stapSeven {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 500px;
-        min-width: 300px;
-        padding: 1em 2em;
-        font-size: 1.1rem;
-        z-index: 99999;
-        display: none;
-      
-            .tutorial7 {
-             @include tutorialIcon;
-            }
-          }
-
 }
 
 
@@ -737,7 +754,7 @@ text {
   left: 400px;
   width: 200px;
   height: 100px;
-  z-index: 999;
+
   cursor: pointer;
 
   svg {
@@ -746,6 +763,9 @@ text {
   }
 }
 
+.zIndex {
+  z-index: 99999999999999;
+}
 
 .deleteMailsPopUp {
   position: absolute;

@@ -58,10 +58,13 @@ async function tutorialStart() {
     const stapFour = document.querySelector(".stapFour");
     const stapFive = document.querySelector(".stapFive");
 
+    const deleteButton = document.querySelector("#DeleteMails")
+
     if (stapFour.classList.contains("openWindow")) {
       stapFour.classList.remove("openWindow");
       stapFive.classList.add("openWindow");
     }
+    deleteButton.classList.toggle("zIndex");
 
     console.log("4 naar 5");
   }
@@ -69,12 +72,13 @@ async function tutorialStart() {
   function stepFiveSix() {
     const stapFive = document.querySelector(".stapFive");
     const stapSix = document.querySelector(".stapSix");
+    const deleteButton = document.querySelector("#DeleteMails")
 
     if (stapFive.classList.contains("openWindow")) {
       stapFive.classList.remove("openWindow");
       stapSix.classList.add("openWindow");
     }
-
+    deleteButton.classList.toggle("zIndex");
     console.log("5 naar 6");
   }
 
