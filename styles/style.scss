@@ -131,7 +131,6 @@ text {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
 
   .swiper {
     @include basicLayoutSticky;
@@ -194,6 +193,7 @@ text {
             font-size: 25px;
           }
         }
+
         lottie-player {
           width: 390px;
           height: 390px;
@@ -280,7 +280,6 @@ text {
 
         a {
           position: relative;
-          // margin-top: 80px;
           background-color: #fff9e2;
           border: 2px solid #ffe993;
           border-radius: 10px;
@@ -349,6 +348,7 @@ text {
   z-index: 999999;
   color: white;
   transition: 0.3s;
+  display: none;
 
   p {
     padding: 0.5em 1em;
@@ -608,6 +608,7 @@ text {
     transform: scale(1.1);
     transition: 0.3s;
   }
+
   p {
     margin: -5px 15px 0 15px;
   }
@@ -825,6 +826,7 @@ text {
 
         a {
           font-size: 16px;
+
           &:nth-of-type(1) {
             text-decoration: underline;
 
@@ -832,6 +834,7 @@ text {
               box-shadow: none;
             }
           }
+
           &:nth-of-type(2) {
             background-color: #fff9e2;
             border: 2px solid #ffe993;
@@ -844,6 +847,7 @@ text {
       }
     }
   }
+
   .loading {
     display: flex;
     flex-direction: column;
@@ -872,6 +876,7 @@ text {
     p {
       margin-top: 40px;
     }
+
     img {
       width: 130px;
       height: auto;
