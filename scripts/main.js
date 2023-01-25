@@ -84,9 +84,6 @@ async function start() {
 					if (focus !== d) zoom(d), d3.event.stopPropagation();
 			});
 
-			// svg.selectAll("circle")
-			// .data(newData.slice(-1));
-
 			const text = svg.selectAll("text")
 			.data(newData)
 			.enter().append("text")

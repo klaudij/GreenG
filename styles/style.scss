@@ -1,6 +1,6 @@
-@import 'files/colors.scss';
-@import 'files/keyframes.scss';
-@import 'files/mixins.scss';
+@import "files/colors.scss";
+@import "files/keyframes.scss";
+@import "files/mixins.scss";
 
 * {
   margin: 0;
@@ -38,13 +38,13 @@
 }
 
 h1 {
-  font-family: 'Lemon Tea', sans-serif;
+  font-family: "Lemon Tea", sans-serif;
   color: $color-blue;
   font-size: 25px;
 }
 
 h2 {
-  font-family: 'Lemon Tea', sans-serif;
+  font-family: "Lemon Tea", sans-serif;
   color: $color-blue;
   font-size: 25px;
 }
@@ -54,7 +54,7 @@ p {
 
   span {
     color: $color-blue;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 }
 
@@ -66,7 +66,7 @@ a {
 
 body {
   background-color: $color-bg;
-  font-family: 'Stylish', sans-serif;
+  font-family: "Stylish", sans-serif;
   overflow: hidden;
 
   b {
@@ -74,20 +74,18 @@ body {
   }
 }
 
-
-
 .node {
   cursor: pointer;
 }
 
 .node:hover {
-  stroke: #C6B8E7;
+  stroke: #c6b8e7;
   stroke-width: 5px;
 }
 
 .node--leaf {
   fill: white;
-  stroke: #C6B8E7;
+  stroke: #c6b8e7;
   stroke-width: 1px;
 }
 
@@ -96,7 +94,7 @@ body {
 }
 
 text {
-  font-family: 'Stylish', sans-serif;
+  font-family: "Stylish", sans-serif;
   font-size: 20px;
   text-anchor: middle;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
@@ -110,7 +108,7 @@ text {
 }
 
 .borderr {
-  stroke: #C6B8E7;
+  stroke: #c6b8e7;
   stroke-width: 5px;
 }
 
@@ -165,7 +163,6 @@ text {
       -webkit-align-items: center;
       align-items: center;
 
-
       h2 {
         font-size: 35px;
       }
@@ -179,7 +176,6 @@ text {
       }
 
       &:nth-of-type(1) {
-
         h2 {
           margin-top: 25px;
           margin-bottom: 10px;
@@ -206,18 +202,15 @@ text {
       }
 
       &:nth-of-type(2) {
-
-
         h2 {
           margin-bottom: 22px;
         }
 
-        >p {
+        > p {
           width: 721px;
           font-size: 20px;
           margin-bottom: 15px;
         }
-
 
         div {
           display: flex;
@@ -225,9 +218,10 @@ text {
           justify-content: center;
           align-items: center;
 
-          >div {
+          > div {
             background-color: $color-yellow;
-            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+              rgba(0, 0, 0, 0.23) 0px 6px 6px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -251,8 +245,8 @@ text {
 
             p:nth-of-type(2) {
               color: $color-blue;
-              font-family: 'Poppins', sans-serif;
-              background-color: #FFF9E2;
+              font-family: "Poppins", sans-serif;
+              background-color: #fff9e2;
               font-size: 23px;
               margin: 10px 0;
             }
@@ -278,39 +272,39 @@ text {
           &:nth-of-type(1) {
             margin: 30px 0;
           }
-          
+
           &:nth-of-type(2) {
-          margin-bottom: 80px;
+            margin-bottom: 80px;
           }
         }
 
-          a {
-            position: relative;
-            // margin-top: 80px;
-            background-color: #FFF9E2;
-            border: 2px solid #FFE993;
-            border-radius: 10px;
-            text-align: center;
-            padding: 15px 40px;
-            font-size: 20px;
-            transition: .5s;
-            z-index: 9999;
+        a {
+          position: relative;
+          // margin-top: 80px;
+          background-color: #fff9e2;
+          border: 2px solid #ffe993;
+          border-radius: 10px;
+          text-align: center;
+          padding: 15px 40px;
+          font-size: 20px;
+          transition: 0.5s;
+          z-index: 9999;
 
-            &:hover{
-              transition: .5s;
-              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-              transform: scale(1.1);
-              cursor: pointer;
-            }
+          &:hover {
+            transition: 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transform: scale(1.1);
+            cursor: pointer;
           }
-  
-          #closeStoryAnimation {
-            position: absolute;
-            left: 0;
-            bottom: -37%;
-            width: 600px;
-            height: 600px;
-          }
+        }
+
+        #closeStoryAnimation {
+          position: absolute;
+          left: 0;
+          bottom: -37%;
+          width: 600px;
+          height: 600px;
+        }
       }
     }
 
@@ -321,13 +315,13 @@ text {
         background-color: #fff9e2e2;
         width: 12px;
         height: 12px;
-        transition: .3s
+        transition: 0.3s;
       }
 
       .swiper-pagination-bullet-active {
-        background-color: #FFF9E2;
+        background-color: #fff9e2;
         transform: scale(1.1);
-        transition: .3s
+        transition: 0.3s;
       }
     }
   }
@@ -341,17 +335,7 @@ text {
     @include storyTapeDown;
     z-index: 999999;
   }
-
 }
-
-
-
-
-
-
-
-
-
 
 .beginTutorial {
   display: none;
@@ -364,12 +348,11 @@ text {
   transition: transform 500ms cubic-bezier(0, 0.2, 1, 1.1);
   z-index: 999999;
   color: white;
-  transition: .3s;
-  display: none;
+  transition: 0.3s;
 
   p {
-    padding: .5em 1em;
-  } 
+    padding: 0.5em 1em;
+  }
 
   a {
     cursor: pointer;
@@ -379,57 +362,57 @@ text {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    transition: .3s;
+    transition: 0.3s;
 
     &:hover {
       transform: scale(1.1);
-      transition: .3s;
+      transition: 0.3s;
     }
   }
 
-  >div {
+  > div {
     @include basicLayoutSticky;
     width: 337px;
     height: 150px;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   button {
     background-color: $color-paleyellow;
-    border: .2em solid $color-yellow;  
-    font-family: 'Stylish', sans-serif;
+    border: 0.2em solid $color-yellow;
+    font-family: "Stylish", sans-serif;
     font-size: 16px;
     border-radius: 10px;
-    padding: .4em 1em .4em 1em ;
+    padding: 0.4em 1em 0.4em 1em;
     margin: 1em;
     cursor: pointer;
-  
+
     &:hover {
       transform: scale(1.1);
-      transition: .3s;
+      transition: 0.3s;
     }
   }
 
- .stapOne {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 500px;
-  min-width: 300px;
-  padding: 1em 2em;
-  font-size: 1.1rem;
-  z-index: 99999;
-  display: none;
+  .stapOne {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    min-width: 300px;
+    padding: 1em 2em;
+    font-size: 1.1rem;
+    z-index: 99999;
+    display: none;
 
-      .tutorial1 {
-       @include tutorialIcon;
-      }
+    .tutorial1 {
+      @include tutorialIcon;
+    }
 
-      a { 
-        color: $color-blue;
-        padding: 1.3em 2em;
-      }
+    a {
+      color: $color-blue;
+      padding: 1.3em 2em;
+    }
   }
 
   .stapTwo {
@@ -444,117 +427,110 @@ text {
     font-size: 1.1rem;
     z-index: 99999;
     display: none;
-  
-        .tutorial2 {
-         @include tutorialIcon;
-         width: 40%;
-         height: auto;
-        }
 
+    .tutorial2 {
+      @include tutorialIcon;
+      width: 40%;
+      height: auto;
     }
+  }
 
-    .button2 {
-      position: absolute;
-      font-size: 22px;
-      border-radius: 100%;
-      width: 260px;
-      height: 260px;
-      left: 400px;
-      top: -125px;
+  .button2 {
+    position: absolute;
+    font-size: 22px;
+    border-radius: 100%;
+    width: 260px;
+    height: 260px;
+    left: 400px;
+    top: -125px;
 
-      &:hover {
-        transform: scale(1);
-        border: 6px solid #C6B8E7;
-      }
+    &:hover {
+      transform: scale(1);
+      border: 6px solid #c6b8e7;
     }
+  }
 
-    .stapThree {
-      position: absolute;
-      bottom: 0%;
-      left: 25%;
-      transform: translate(-50%, -50%);
-      max-width: 500px;
-      min-width: 300px;
-      padding: 1em 1em 1.5em 2em;
-      font-size: 1.1rem;
+  .stapThree {
+    position: absolute;
+    bottom: 0%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    min-width: 300px;
+    padding: 1em 1em 1.5em 2em;
+    font-size: 1.1rem;
+    z-index: 99999;
+    display: none;
+
+    .tutorial3 {
+      @include tutorialIcon;
+      width: 40%;
       z-index: 99999;
-      display: none;
-    
-          .tutorial3 {
-            @include tutorialIcon;
-            width: 40%;
-            z-index: 99999;
-          }
+    }
+  }
 
-      }
+  .stapFour {
+    position: absolute;
+    bottom: 0%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    min-width: 300px;
+    padding: 1em 1em 1.5em 2em;
+    font-size: 1.1rem;
+    z-index: 99999;
+    display: none;
 
-      .stapFour {
-        position: absolute;
-        bottom: 0%;
-        left: 25%;
-        transform: translate(-50%, -50%);
-        max-width: 500px;
-        min-width: 300px;
-        padding: 1em 1em 1.5em 2em;
-        font-size: 1.1rem;
-        z-index: 99999;
-        display: none;
-      
-            .tutorial4 {
-              @include tutorialIcon;
-              width: 35%;
-              z-index: 99999;
-            }
-        }
-  
-        .tutorialimg {
-          position: absolute;
-          top: -600px;
-          left: 300px;
-          width: 800px;
-          height: auto;
-    
-        }
-  
-        .stapFive {
-          position: absolute;
-          bottom: 0%;
-          left: 25%;
-          transform: translate(-50%, -50%);
-          max-width: 500px;
-          min-width: 300px;
-          padding: 1em 1em 1.5em 2em;
-          font-size: 1.1rem;
-          z-index: 99999;
-          display: none;
-        
-              .tutorial5 {
-               @include tutorialIcon;
-              }
-          }
+    .tutorial4 {
+      @include tutorialIcon;
+      width: 35%;
+      z-index: 99999;
+    }
+  }
 
-            
-        .stapSix {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          max-width: 600px;      
-          min-width: 400px;
-          padding: 1em 1em 4em 2em;
-          font-size: 1.1rem;
-          z-index: 99999;
-          display: none;
-        
-              .tutorial6 {
-               @include tutorialIcon;
-               width: 35%;
-              }
-      }
+  .tutorialimg {
+    position: absolute;
+    top: -600px;
+    left: 300px;
+    width: 800px;
+    height: auto;
+  }
+
+  .stapFive {
+    position: absolute;
+    bottom: 0%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    min-width: 300px;
+    padding: 1em 1em 1.5em 2em;
+    font-size: 1.1rem;
+    z-index: 99999;
+    display: none;
+
+    .tutorial5 {
+      @include tutorialIcon;
+    }
+  }
+
+  .stapSix {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    min-width: 400px;
+    padding: 1em 1em 4em 2em;
+    font-size: 1.1rem;
+    z-index: 99999;
+    display: none;
+
+    .tutorial6 {
+      @include tutorialIcon;
+      width: 35%;
+    }
+  }
 }
-
-
-
 
 #factory {
   position: absolute;
@@ -580,7 +556,7 @@ text {
 
   h1 {
     text-align: center;
-    padding: 1em 1em .5em 1em;
+    padding: 1em 1em 0.5em 1em;
   }
 
   #tapeSticky {
@@ -591,13 +567,11 @@ text {
     position: relative;
     background-color: $color-yellow;
     padding: 1em;
-    margin: 1em .5em;
-    border: .2em solid $color-blue;
+    margin: 1em 0.5em;
+    border: 0.2em solid $color-blue;
     border-radius: 10px;
-
   }
 }
-
 
 #filter {
   @include basicLayoutSticky;
@@ -610,15 +584,16 @@ text {
   bottom: 200px;
   z-index: 1;
 
-  button, select { 
+  button,
+  select {
     background-color: $color-paleyellow;
-    border: .2em solid $color-yellow;  
-    font-family: 'Stylish', sans-serif;
+    border: 0.2em solid $color-yellow;
+    font-family: "Stylish", sans-serif;
     font-size: 16px;
     border-radius: 10px;
     width: 105px;
-    padding: .4em 1em .4em 1em ;
-    margin: .7em .7em;
+    padding: 0.4em 1em 0.4em 1em;
+    margin: 0.7em 0.7em;
     cursor: pointer;
   }
 
@@ -629,16 +604,16 @@ text {
     margin-left: 20px;
   }
 
-   button:hover {
+  button:hover {
     transform: scale(1.1);
-    transition: .3s;
-   }
+    transition: 0.3s;
+  }
   p {
     margin: -5px 15px 0 15px;
   }
 
   .filterTitle {
-    font-family: 'Stylish', sans-serif;
+    font-family: "Stylish", sans-serif;
     color: #000;
     position: absolute;
     margin-top: -43px;
@@ -659,7 +634,7 @@ text {
   #dropdown {
     position: relative;
     width: 15%;
-    padding: 0 .5em 0  .5em;
+    padding: 0 0.5em 0 0.5em;
   }
 
   #tapeFilter {
@@ -683,7 +658,7 @@ text {
   }
 
   .title {
-    font-family: 'Stylish', sans-serif;
+    font-family: "Stylish", sans-serif;
     color: #000;
     position: absolute;
     margin-top: -43px;
@@ -691,7 +666,7 @@ text {
     font-size: 18px;
     z-index: 99;
   }
-  
+
   #tapeTotal {
     @include tapePosition;
   }
@@ -724,11 +699,11 @@ text {
     width: 80%;
     height: auto;
     padding: 0 0 1.2em 0;
-    transition: .5s;
+    transition: 0.5s;
 
     &:hover {
       transform: scale(1.3);
-      transition: .5s;
+      transition: 0.5s;
     }
   }
 
@@ -737,17 +712,14 @@ text {
     cursor: pointer;
     width: 65px;
     height: 65px;
-    transition: .5s;
+    transition: 0.5s;
 
     &:hover {
       transform: scale(1.3);
-      transition: .5s;
+      transition: 0.5s;
     }
-
   }
-
 }
-
 
 #DeleteMails {
   position: absolute;
@@ -781,7 +753,7 @@ text {
   align-items: center;
   display: none;
 
-  >div {
+  > div {
     @include basicLayoutSticky;
 
     width: 605px;
@@ -801,7 +773,6 @@ text {
   }
 
   .followUp {
-    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -811,7 +782,7 @@ text {
     .tape {
       margin-left: 0px !important;
     }
-    
+
     img {
       width: 220px;
       height: auto;
@@ -822,13 +793,12 @@ text {
       margin: 10px 0;
       text-align: left;
 
-      &:nth-of-type(1){
+      &:nth-of-type(1) {
         font-size: 24px;
       }
 
-      &:nth-of-type(2){
+      &:nth-of-type(2) {
         font-size: 14px;
-        
       }
     }
 
@@ -841,7 +811,7 @@ text {
       width: 326px;
 
       a:hover {
-        transition: .5s;
+        transition: 0.5s;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         transform: scale(1.1);
         cursor: pointer;
@@ -853,24 +823,22 @@ text {
         flex-direction: row;
         align-items: center;
 
-
         a {
-
           font-size: 16px;
-          &:nth-of-type(1){
+          &:nth-of-type(1) {
             text-decoration: underline;
 
             &:hover {
               box-shadow: none;
             }
           }
-          &:nth-of-type(2){
-            background-color: #FFF9E2;
-            border: 2px solid #FFE993;
+          &:nth-of-type(2) {
+            background-color: #fff9e2;
+            border: 2px solid #ffe993;
             border-radius: 10px;
             text-align: center;
             padding: 10px 20px;
-            transition: .5s;
+            transition: 0.5s;
           }
         }
       }
@@ -898,10 +866,9 @@ text {
   .finished {
     display: flex;
     flex-direction: column;
-    align-items:center ;
+    align-items: center;
     display: none;
 
-    
     p {
       margin-top: 40px;
     }
@@ -916,16 +883,16 @@ text {
       position: relative;
 
       // margin-top: 80px;
-      background-color: #FFF9E2;
-      border: 2px solid #FFE993;
+      background-color: #fff9e2;
+      border: 2px solid #ffe993;
       border-radius: 10px;
       text-align: center;
       padding: 15px 40px;
       font-size: 20px;
-      transition: .5s;
+      transition: 0.5s;
 
       &:hover {
-        transition: .5s;
+        transition: 0.5s;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         transform: scale(1.1);
         cursor: pointer;
@@ -934,22 +901,19 @@ text {
   }
 }
 
-
 .closeWindow {
   display: none;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .openWindow {
   display: flex !important;
-  transition: .3s;
+  transition: 0.3s;
 }
-
-
 
 footer {
   position: fixed;
-  font-family: 'Lemon Tea', sans-serif;
+  font-family: "Lemon Tea", sans-serif;
   font-size: 10px;
   bottom: 0;
   right: 0;
@@ -958,11 +922,6 @@ footer {
   z-index: 3;
 }
 
-
-
-
-
-
 #tooltip1 {
   @include basicLayoutSticky;
   position: absolute;
@@ -970,8 +929,6 @@ footer {
   color: black;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
- padding: 3px;
+  padding: 3px;
   opacity: 0;
-
-
 }
