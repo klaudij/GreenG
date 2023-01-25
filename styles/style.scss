@@ -117,10 +117,6 @@ text {
   border-radius: 50%;
 }
 
-
-
-
-
 .storyTelling {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.565);
@@ -132,7 +128,7 @@ text {
   display: flex;
   justify-content: center;
   align-items: center;
-  // display: none;
+  display: none;
 
   .swiper {
     @include basicLayoutSticky;
@@ -459,7 +455,7 @@ text {
       width: 260px;
       height: 260px;
       left: 400px;
-      top: -120px;
+      top: -125px;
 
       &:hover {
         transform: scale(1);

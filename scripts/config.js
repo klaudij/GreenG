@@ -3,4 +3,3 @@ const CONFIG = {
 }
 
 export default CONFIG;
-console.log("CONFIG works")

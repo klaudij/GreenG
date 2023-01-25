@@ -8,10 +8,6 @@ import tutorialStart from './tutorial.js';
 import CONFIG from './config.js';
 import request from './request.js';
 
-// We can use node_modules directely in the browser!
-// import * as d3 from 'd3';
-
-console.log('Hello, world!');
 storyAdnFollowQ();
 tutorialStart();
 
@@ -20,7 +16,7 @@ tutorialStart();
 ///////////////////////////////////////////////////////////////////////
 async function start() {
 	const dataa = await request(CONFIG.url);
-	// console.log(dataa.children)
+
 	const margin = 0,
 			padding = 3,
 			diameter = 750,
@@ -50,9 +46,6 @@ async function start() {
 			newData = pack.nodes(dataa),
 			view;
 
-
-			console.log(newData[1].name)
-
 			const circle = svg.selectAll("circle")
 			.data(newData)
 			.enter().append("circle") 
@@ -61,7 +54,7 @@ async function start() {
 					return d.children ? "node" : "node node--leaf" ;
 			})
 			.style("fill", function(d) {
-					return d.children ? color(d.depth) : null;
+				return d.children ? color(d.depth) : null;
 			})
 			.style("fill-opacity", function(d) {
 				return d.parent === dataa ? 1 : 0;
@@ -189,51 +182,3 @@ async function start() {
 	
 }
 start();
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-
-
-// window.onload = function() {
-//   document.getElementById('button').addEventListener('click', function() {
-//     chrome.identity.getAuthToken({interactive: true}, function(token) {
-//       let init = {
-//         method: 'GET',
-//         async: true,
-//         headers: {
-//           Authorization: 'Bearer ' + token,
-//           'Content-Type': 'application/json'
-//         },
-//         'contentType': 'json'
-//       };
-//       fetch(
-//         'https://gmail.googleapis.com/gmail/v1/users/me/profile',
-//         init)
-//         .then((response) => response.json())
-//         .then(async function(data){
-//           amountOfEmails = data.messagesTotal;
-//         })
-//         .then(async function() {
-//           emails = await listAllEmails(token, 'category:promotions')
-//         }).then(async function(){
-//           sizeOfInbox = await getSizeOfEmails(token, emails)
-//           document.getElementById('amountOfEmails').innerHTML = amountOfEmails
-//           document.getElementById('sizeOfInbox').innerHTML = `${parseFloat(sizeOfInbox / 1048576).toFixed(2)}MB`
-//           document.getElementById('uitstoot').innerHTML = `${parseFloat((sizeOfInbox / 1048576) * 2.26 / 1000).toFixed(2)} kilograms of CO2 per year`
-//         });
-//     });
-//   });
-
-//   document.getElementById("driveButton").addEventListener('click', function(){
-//     chrome.identity.getAuthToken({interactive: true}, async function(token) {
-//       await getDriveInfo(token)
-//       .then((response) => response.json())
-//       .then((data) => {
-//         console.log(data)
-//         var amountOfData = parseFloat(data.storageQuota.usageInDrive) + parseFloat(data.storageQuota.usageInDriveTrash)
-//         document.getElementById('driveSize').innerHTML = `${parseFloat(amountOfData / 1073741824).toFixed(2)}GB in your drive`
-//         document.getElementById('driveUitstoot').innerHTML = `${parseFloat((amountOfData / 1048576) * 2.26 / 1000).toFixed(2)} kilogram of CO2 per year`
-//       })
-//     });
-//   })
-// };

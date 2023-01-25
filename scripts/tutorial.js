@@ -3,7 +3,6 @@ async function tutorialStart() {
   function toggleModal() {
     const tutorial = document.querySelector(".beginTutorial");
     tutorial.classList.toggle("openWindow");
-    console.log("clickk");
   }
 
   document.querySelector(".tutorialReplay").addEventListener("click", toggleModal);
@@ -26,8 +25,6 @@ async function tutorialStart() {
       stapOne.classList.remove("openWindow");
       stapTwo.classList.add("openWindow");
     }
-
-    console.log("1 naar 2");
   }
 
   function stepTwoThree() {
@@ -38,8 +35,6 @@ async function tutorialStart() {
       stapTwo.classList.remove("openWindow");
       stapThree.classList.add("openWindow");
     }
-
-    console.log("2 naar 3");
   }
 
   function stepThreeFour() {
@@ -50,8 +45,6 @@ async function tutorialStart() {
       stapThree.classList.remove("openWindow");
       stapFour.classList.add("openWindow");
     }
-
-    console.log("3 naar 4");
   }
 
   function stepFourFive() {
@@ -65,8 +58,6 @@ async function tutorialStart() {
       stapFive.classList.add("openWindow");
     }
     deleteButton.classList.toggle("zIndex");
-
-    console.log("4 naar 5");
   }
 
   function stepFiveSix() {
@@ -79,7 +70,6 @@ async function tutorialStart() {
       stapSix.classList.add("openWindow");
     }
     deleteButton.classList.toggle("zIndex");
-    console.log("5 naar 6");
   }
 
   document.querySelector(".button1").addEventListener("click", stepOneTwo);
@@ -114,8 +104,6 @@ async function tutorialStart() {
     if (stapSix.classList.contains("openWindow")) {
       stapSix.classList.remove("openWindow");
     }
-
-    console.log("aflsuiten");
   }
 
   document.querySelector("#tutorial").addEventListener("click", restartTut);

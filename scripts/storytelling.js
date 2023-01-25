@@ -6,7 +6,6 @@ function closeStory() {
 
     storyTelling.classList.toggle("closeWindow");
     tutorial.classList.add("openWindow")
-    console.log("clickk")
 
 }
 document.querySelector('#closeStory').addEventListener('click', closeStory);
@@ -33,7 +32,6 @@ function returnToMails() {
     if(deletMailPopUP.classList.contains("openWindow")) {
         deletMailPopUP.classList.remove("openWindow"); 
     }
-    console.log("continue to home")
 }
 
 //Proceeding to go to loading screen
@@ -45,9 +43,6 @@ function proceedToLoading() {
         followUpQ.classList.remove("openWindow"); 
         loading.classList.add("openWindow"); 
     }
-
-
-    console.log("continue to loading")
 }
 
 
@@ -60,8 +55,6 @@ function LoadingToFinish() {
         loading.classList.remove("openWindow"); 
         finish.classList.add("openWindow"); 
     }
-
-    console.log("continue to finish")
 }
 
 //from finished screen return to home
@@ -72,8 +65,6 @@ function closeDeletMail() {
     if (finish.classList.contains("openWindow")) {
         deletMailPopUP.classList.remove("openWindow"); 
     }
-
-    console.log("continue to home")
 }
 
 document.querySelector("#DeleteMails").addEventListener("click", openDeleteScreen);
@@ -84,5 +75,3 @@ document.querySelector('#closeDeletePopUp').addEventListener('click', closeDelet
 }
 
 export default storyAdnFollowQ;
-
-console.log("request.js workss")
