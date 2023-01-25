@@ -10,11 +10,6 @@ Minor Information Design final assessment
 
 
 ## Introduction 👋🏻
-This repository will be my journey for this years tech-track course. 
-
-The goal of this course is to create a data visualisation (using D3 and if you feel brave you can use more libraries/fameworkes), based on your chosen data where you focus on Architecture, Visualization and/or Storytelling.
-
-More information about the tech-track course can be found [ here ](https://github.com/cmda-tt/course-22-23)
 
 
 
@@ -44,7 +39,7 @@ To install all the dependencies, type(copy) the following in your terminal:
 npm install
 ```
 
-My application makes use of the following dependencies/libraries:
+Our application makes use of the following dependencies/libraries:
 - [ SASS ](https://sass-lang.com/install)
 - [ D3 ](https://www.npmjs.com/package/d3)
 - [ Swiper ](https://swiperjs.com/get-started)
