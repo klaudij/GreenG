@@ -66,4 +66,4 @@ example ---> Local:   http://localhost:5174/
 
 
 ## Authors 🙋🏻‍♀️
-**Author:** Klaudija Miskovic
+**Author:** Klaudija Miskovic & Demi Broere
